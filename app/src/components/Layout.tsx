@@ -3,7 +3,7 @@ import { MobileNavbar } from "./MobileNavbar";
 
 export function Layout({ children }) {
   return (
-    <main className="h-screen w-full flex">
+    <main className="h-screen w-full">
       <MobileNavbar />
       {children}
     </main>
