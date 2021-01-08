@@ -9,10 +9,11 @@ import category from './category'
 import product from './product'
 import vendor from './vendor'
 import productVariant from './productVariant'
+import pizza from './pizza'
 
-import localeString from './locale/String'
-import localeText from './locale/Text'
-import localeBlockContent from './locale/BlockContent'
+import localeString from '../locale/String'
+import localeText from '../locale/Text'
+import localeBlockContent from '../locale/BlockContent'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,5 +34,6 @@ export default createSchema({
     localeBlockContent,
     localeString,
     productVariant,
+    pizza
   ]),
 })

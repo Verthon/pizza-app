@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "pizza-app"
-  },
   "api": {
     "projectId": "d8yx2txf",
-    "dataset": "production"
+    "dataset": "develop"
+  },
+  "project": {
+    "name": "pizza-app"
   },
   "plugins": [
     "@sanity/base",
