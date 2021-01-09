@@ -1,13 +1,13 @@
 export default {
-  name: "pizza",
-  title: "Pizzas",
+  name: "toppings",
+  title: "Toppings",
   type: "document",
   fields: [
     {
       name: "name",
-      title: "Pizza name",
+      title: "Topping name",
       type: "string",
-      description: "Name of your pizza"
+      description: "What is the name of the topping?"
     },
     {
       name: "slug",
