@@ -1,6 +1,6 @@
 export default {
   name: "topping",
-  title: "Topping",
+  title: "Toppings",
   type: "document",
   fields: [
     {
