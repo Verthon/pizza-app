@@ -26,16 +26,12 @@ module.exports = {
     {
       resolve: `gatsby-source-sanity`,
       options: {
-        projectId: `abc123`,
-        dataset: `blog`,
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: `production`,
         watchMode: true,
         // a token with read permissions is required
         // if you have a private dataset
         token: process.env.SANITY_TOKEN,
-
-        // If the Sanity GraphQL API was deployed using `--tag <name>`,
-        // use `graphqlTag` to specify the tag name. Defaults to `default`.
-        graphqlTag: 'default',
       },
     },
     `gatsby-plugin-sharp`,
