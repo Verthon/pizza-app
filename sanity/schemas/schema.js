@@ -10,6 +10,7 @@ import product from './product'
 import vendor from './vendor'
 import productVariant from './productVariant'
 import pizza from './pizza'
+import topping from "./topping"
 
 import localeString from '../locale/String'
 import localeText from '../locale/Text'
@@ -34,6 +35,7 @@ export default createSchema({
     localeBlockContent,
     localeString,
     productVariant,
-    pizza
+    pizza,
+    topping
   ]),
 })
