@@ -1,3 +1,5 @@
+require('dotenv').config({ path: "./env.local" })
+
 module.exports = {
   siteMetadata: {
     title: "app",
@@ -21,8 +23,20 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: "d8yx2txf",
+        dataset: `develop`,
+        watchMode: true,
+        // a token with read permissions is required
+        // if you have a private dataset
+        token: process.env.SANITY_TOKEN,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    "gatsby-plugin-postcss",
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-postcss`,
   ],
 };
