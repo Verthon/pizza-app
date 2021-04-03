@@ -13,6 +13,7 @@ export const fadeInDown = keyframes`
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
   }
 
   a {
@@ -23,5 +24,10 @@ export const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
     padding: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 `

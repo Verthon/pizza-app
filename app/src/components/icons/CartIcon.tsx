@@ -1,12 +1,15 @@
 import * as React from "react";
+import { theme } from "../../theme/Theme";
 
-export function CartIcon({ width, height }) {
+import { Props } from "./Types";
+
+export function CartIcon({ width = 24, height = 24, color = theme.colors.iconColor }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      stroke="currentColor"
+      stroke={color}
       width={width}
       height={height}
     >

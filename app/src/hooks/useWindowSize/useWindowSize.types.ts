@@ -1,4 +1,4 @@
 export type State = {
-  width?: number
-  height?: number
+  width: number
+  height: number
 }

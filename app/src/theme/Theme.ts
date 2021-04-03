@@ -7,7 +7,9 @@ export interface ITheme {
     text: string,
     white: string,
     warning: string,
-    gray2: string
+    gray2: string,
+    grey300: string,
+    iconColor: string,
   },
   fontSizes: {
     title: string,
@@ -68,13 +70,17 @@ const shadow = {
 }
 
 const colors = {
-  primary: 'hsl(225.4,29.1%,24.9%)',
+  primary: '#007EE5',
   primaryText: 'hsl(0,0%,100%)',
   secondary: 'hsl(180,20%,97.1%)',
   active: 'hsl(154.4,47.1%,65.9%)',
   text: 'hsl(203,13%,44%)',
   white: 'hsl(0,0%,100%)',
   warning: 'hsl(350, 69%, 36%)',
+  grey100: '#f5f9ff',
+  grey300: '#e5e7ea',
+  grey400: '#a5abbd',
+  iconColor: '#b4aea5',
   gray2: 'hsl(240,5%,84.3%)'
 }
 

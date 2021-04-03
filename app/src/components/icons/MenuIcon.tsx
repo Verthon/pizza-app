@@ -1,6 +1,7 @@
 import * as React from "react";
+import { Props } from "./Types";
 
-export function MenuIcon({ width, height }) {
+export function MenuIcon({ width = 24, height = 24 }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -4,8 +4,8 @@ import { State } from "./useWindowSize.types";
 
 export const useWindowSize = () => {
   const [windowSize, setWindowSize] = React.useState<State>({
-    width: undefined,
-    height: undefined,
+    width: 0,
+    height: 0,
   });
 
   React.useEffect(() => {
