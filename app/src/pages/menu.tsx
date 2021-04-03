@@ -1,8 +1,8 @@
 import { graphql } from "gatsby"
 import * as React from "react"
-import { Layout } from "../components/Layout"
+import { Layout } from "../components/Layout/Layout"
 
-function MenuPage({ data }) {
+function MenuPage({ data }: {data: unknown}) {
   console.log(data)
   return (
     <Layout>

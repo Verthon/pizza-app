@@ -2,7 +2,8 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import image from "../assets/images/kelvin-theseira-pizza.jpg"
 
-import { Layout } from "../components/Layout"
+import { Layout } from "../components/Layout/Layout"
+
 
 // markup
 function IndexPage() {
