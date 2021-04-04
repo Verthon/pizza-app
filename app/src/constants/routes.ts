@@ -3,4 +3,5 @@ export const ROUTES = {
   about: "/about",
   order: "/order",
   menu: "/menu",
+  delivery: "/delivery"
 }

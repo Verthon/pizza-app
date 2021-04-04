@@ -11,23 +11,23 @@ function MenuPage({ data }: {data: unknown}) {
   )
 }
 
-export const query = graphql`
-  query getPizzas {
-    pizzas: allSanityPizza {
-      nodes {
-        name
-        id
-        slug {
-          current 
-        }
-        toppings {
-          id
-          name
-        }
-      }
-    }
-  }
+// export const query = graphql`
+//   query getPizzas {
+//     pizzas: allSanityPizza {
+//       nodes {
+//         name
+//         id
+//         slug {
+//           current 
+//         }
+//         toppings {
+//           id
+//           name
+//         }
+//       }
+//     }
+//   }
 
-`
+// `
 
 export default MenuPage

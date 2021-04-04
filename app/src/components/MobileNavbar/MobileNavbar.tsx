@@ -2,26 +2,16 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import { ROUTES } from "../../constants/routes"
-import { CartIcon } from "../icons/CartIcon"
-import { HomeIcon } from "../icons/HomeIcon"
-import { MenuIcon } from "../icons/MenuIcon"
-import { theme } from "../../theme/Theme";
+import { CartIcon } from "../icons/Cart"
+import { HomeIcon } from "../icons/Home"
+import { MenuIcon } from "../icons/Menu"
+import { UserIcon } from "../icons/User"
+import { getIconColor } from "../../utils/colors"
 
 import { Styled } from "./MobileNavbar.styles"
 
+
 export function MobileNavbar() {
-
-  React.useEffect(() => {
-    console.log(window.location.pathname);
-  }, [])
-
-  const getIconColor = (route: string) => {
-    if(route === window.location.pathname) {
-      return theme.colors.dark;
-    }
-
-    return theme.colors.iconColor;
-  }
 
   return <Styled.MobileNavbarContainer>
     <Styled.MobileNavbarList>
