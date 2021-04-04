@@ -10,6 +10,7 @@ export interface ITheme {
     gray2: string,
     grey300: string,
     iconColor: string,
+    dark: string
   },
   fontSizes: {
     title: string,
@@ -81,7 +82,8 @@ const colors = {
   grey300: '#e5e7ea',
   grey400: '#a5abbd',
   iconColor: '#b4aea5',
-  gray2: 'hsl(240,5%,84.3%)'
+  gray2: 'hsl(240,5%,84.3%)',
+  dark: "#252525"
 }
 
 const fontSizes = {

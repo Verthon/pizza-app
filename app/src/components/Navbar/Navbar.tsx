@@ -3,6 +3,7 @@ import { useWindowSize } from "../../hooks/useWindowSize/useWindowSize"
 import { theme } from "../../theme/Theme";
 
 import { MobileNavbar } from "../MobileNavbar/MobileNavbar"
+import { Styled } from "./Navbar.styles"
 
 export function Navbar() {
   const size = useWindowSize();
@@ -13,8 +14,8 @@ export function Navbar() {
     )
   }
   return (
-    <nav>
-      Test
-    </nav>
+    <Styled.Nav>
+      Desktop Navbar
+    </Styled.Nav>
   )
 }
