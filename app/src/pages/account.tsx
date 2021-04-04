@@ -1,13 +1,12 @@
 import * as React from "react"
 import { Layout } from "../components/Layout/Layout"
 
-// markup
-function OrderPage() {
+function AccountPage() {
   return (
     <Layout>
-      <p>order</p>
+      <p>About page</p>
     </Layout>
   )
 }
 
-export default OrderPage
+export default AccountPage

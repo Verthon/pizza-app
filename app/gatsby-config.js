@@ -5,7 +5,6 @@ module.exports = {
     title: "app",
   },
   plugins: [
-    "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
@@ -37,6 +36,5 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-postcss`,
   ],
 };
