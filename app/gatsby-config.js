@@ -1,27 +1,40 @@
+require('dotenv').config({ path: "./env.local" })
+
 module.exports = {
   siteMetadata: {
     title: "app",
   },
   plugins: [
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/assets/images/icon.png",
       },
     },
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/images/",
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: "d8yx2txf",
+        dataset: `develop`,
+        watchMode: true,
+        // a token with read permissions is required
+        // if you have a private dataset
+        token: process.env.SANITY_TOKEN,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
   ],
 };
