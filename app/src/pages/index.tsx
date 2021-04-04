@@ -11,7 +11,7 @@ function IndexPage() {
         <h1 className="text-2xl text-center font-semibold text-gray-700">Mighty Pizza</h1>
         <p className="text py-4 text-center text-gray-600">Finest pizza in town</p>
         <img className="rounded" src={image} />
-        <h2 className="text-lg text-gray-700 mt-4 font-semibold">Hot pizzas</h2>
+        <h2 className="text-lg text-gray-700 mt-4 font-semibold">Top this weekend</h2>
     </Layout>
   )
 }
