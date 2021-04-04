@@ -1,7 +1,7 @@
 import { theme } from "../theme/Theme";
 
 export const getIconColor = (route: string) => {
-  if(route === window.location.pathname) {
+  if (typeof window !== `undefined` && route === window?.location?.pathname) {
     return theme.colors.dark;
   }
 
