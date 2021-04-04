@@ -2,7 +2,9 @@ require('dotenv').config({ path: "./env.local" })
 
 module.exports = {
   siteMetadata: {
-    title: "app",
+    title: "pizza-app",
+    siteUrl: `https://gatsby-pizza-app.netlify.app/`,
+    description: `Small pizzeria with Sanity backend`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
