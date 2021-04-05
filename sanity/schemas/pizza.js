@@ -34,6 +34,12 @@ export default {
       validation: Rule => Rule.min(1000).max(50000)
     },
     {
+      name: "hot",
+      title: "Is top this week ?",
+      type: "boolean",
+      description: "Pizzas that are promoted this week",
+    },
+    {
       name: "toppings",
       title: "Toppings",
       type: "array",
@@ -49,5 +55,5 @@ export default {
       topping2: "toppings.2.name",
       topping3: "toppings.3.name"
     }
-  }
+  },
 }

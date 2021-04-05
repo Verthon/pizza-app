@@ -1,5 +1,5 @@
 import { ROUTES } from "../../src/constants/routes";
-import { theme } from "../../src/theme/Theme";
+import { theme } from "../../src/theme/theme";
 import { getIconColor } from "../../src/utils/colors"
 
 let windowSpy: any;

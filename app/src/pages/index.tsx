@@ -1,33 +1,54 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import image from "../assets/images/kelvin-theseira-pizza.jpg"
+import * as React from "react";
+import { graphql } from "gatsby";
 
-import { Layout } from "../components/Layout/Layout"
+import { Layout } from "../components/Layout/Layout";
+import { InfoBar } from "../components/InfoBar/InfoBar";
+import { Coupon } from "../components/Coupon/Coupon";
+import { PizzaList } from "../components/PizzaList/PizzaList";
+import { Pizzas } from "../api/types";
 
 // markup
-function IndexPage() {
+function IndexPage({ data }: { data: Pizzas }) {
+  console.log(data);
   return (
     <Layout>
-        <h1 className="text-2xl text-center font-semibold text-gray-700">Mighty Pizza</h1>
-        <p className="text py-4 text-center text-gray-600">Finest pizza in town</p>
-        <img className="rounded" src={image} />
-        <h2 className="text-lg text-gray-700 mt-4 font-semibold">Top this weekend</h2>
+      <h1>Mighty Pizza</h1>
+      <InfoBar text="250 Straconki, Bielsko - Biala, 43-300" />
+      <Coupon discount={50} text="for your next order" />
+      <h2>Top this weekend</h2>
+      <PizzaList pizzas={data.pizzas.nodes} />
     </Layout>
-  )
+  );
 }
 
-// export const query = graphql`
-//   query {
-//     file(relativePath: { eq: "src/assets/images/chad-montano-pizza.jpg" }) {
-//       childImageSharp {
-//         # Specify the image processing specifications right in the query.
-//         # Makes it trivial to update as your page's design changes.
-//         fixed(width: 125, height: 125) {
-//           ...GatsbyImageSharpFixed
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query getTopPizzas {
+    pizzas: allSanityPizza(filter: { hot: { eq: true } }) {
+      nodes {
+        name
+        id
+        slug {
+          current
+        }
+        toppings {
+          id
+          name
+          vegetarian
+        }
+        price
+        image {
+          asset {
+            fluid(maxWidth: 400, maxHeight: 207) {
+              base64
+              srcWebp
+              srcSetWebp
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
-export default IndexPage
+export default IndexPage;
