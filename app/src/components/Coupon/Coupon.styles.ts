@@ -10,6 +10,10 @@ const Container = styled.div`
   padding: ${({theme}: Theme ) => theme.spacing.sm};
   border-radius: ${({theme}: Theme ) => theme.border.defaultRadius};
   margin: 1rem 0;
+
+  .emoji {
+    font-size: 1.75rem;
+  }
 `
 
 const Content = styled.div`

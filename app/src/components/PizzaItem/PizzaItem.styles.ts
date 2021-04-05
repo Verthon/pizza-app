@@ -2,11 +2,10 @@ import styled from "styled-components"
 import { Theme } from "../../theme/theme"
 
 const Container = styled.div`
-  padding: ${({theme}: Theme ) => theme.spacing.md};
+  padding: ${({theme}: Theme ) => theme.spacing.md} 0;
 `
 
 const Image = styled.img`
-  max-height: 267px;
   border-radius: ${({theme}: Theme ) => theme.border.defaultRadius};
 `
 
@@ -18,7 +17,7 @@ const Footer = styled.footer`
     margin: ${({theme}: Theme ) => theme.spacing.sm} 0;
   }
   span {
-    font-size: 16px;
+    font-size: 1rem;
   }
 `
 

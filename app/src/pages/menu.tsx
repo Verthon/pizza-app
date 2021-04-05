@@ -5,7 +5,6 @@ import { Layout } from "../components/Layout/Layout"
 import { PizzaList } from "../components/PizzaList/PizzaList"
 
 function MenuPage({ data }: {data: Pizzas}) {
-  console.log(data.pizzas)
   return (
     <Layout>
       <PizzaList pizzas={data.pizzas.nodes} />
