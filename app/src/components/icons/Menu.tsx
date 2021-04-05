@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { theme } from "../../theme/Theme";
+import { theme } from "../../theme/theme";
 import { Props } from "./Types";
 
 export function MenuIcon({ width = 24, height = 24, color = theme.colors.iconColor }: Props) {
