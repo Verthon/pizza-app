@@ -30,7 +30,7 @@ query getPizzas {
       price
       image {
         asset {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 400, maxHeight: 207) {
             base64
             srcWebp
             srcSetWebp

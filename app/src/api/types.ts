@@ -5,7 +5,8 @@ export type PizzaNode = {
     current: string,
   }
   toppings: Topping[],
-  image: Image
+  image: Image,
+  price: number,
 }
 
 export type Topping = {

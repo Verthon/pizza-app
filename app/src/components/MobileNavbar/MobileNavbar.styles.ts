@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Theme } from '../../theme/Theme'
+import { Theme } from '../../theme/theme'
 
 export const MobileNavbarContainer = styled.nav`
   width: 100%;

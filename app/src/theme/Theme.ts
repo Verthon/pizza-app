@@ -1,56 +1,15 @@
 export interface ITheme {
-  colors: {
-    primary: string,
-    primaryText: string,
-    secondary: string,
-    active: string,
-    text: string,
-    white: string,
-    warning: string,
-    gray2: string,
-    grey300: string,
-    iconColor: string,
-    dark: string
-  },
-  fontSizes: {
-    title: string,
-    regular: string,
-    small: string
-  },
-  fontFamily: {
-    main: string
-  },
-  fontWeights: {
-    black: number,
-    bold: number,
-    regular: number,
-  },
-  shadow: {
-    default: string,
-    category: string
-  },
-  breakpoints: {
-    xs: number,
-    sm: number,
-    md: number,
-    lg: number,
-    xl: number
-  },
-  spacing: {
-    xxs: string,
-    xs: string,
-    sm: string,
-    md: string,
-    lg: string,
-    xl: string,
-    title: string
-  },
+  colors: typeof colors
+  fontSizes: typeof fontSizes
+  fontFamily: typeof fontFamily
+  fontWeights: typeof fontWeights
+  shadow: typeof shadow
+  breakpoints: typeof breakpoints
+  spacing: typeof spacing
   logo: {
     width: string
   },
-  border: {
-    defaultRadius: string
-  },
+  border: typeof border
   flexColumnMixin: string
 }
 
@@ -61,7 +20,8 @@ export type Theme = {
 const flexColumnMixin = 'display: flex; flex-direction: column'
 
 const border = {
-  defaultRadius: '10px'
+  defaultRadius: '10px',
+  smRadius: '2px'
 }
 
 export const mediaQueries = (key: keyof typeof breakpoints) => {
@@ -75,7 +35,16 @@ const shadow = {
 }
 
 const colors = {
+  primary50: '#CCE8FF',
+  primary100: '#B2DCFF',
+  primary200: '#7FC5FF',
+  primary300: '#4CAEFF',
+  primary400: '#1998FF',
   primary: '#007EE5',
+  primary600: '#0062B2',
+  primary700: '#00467F',
+  primary800: '#002A4C',
+  primary900: '#000E19',
   primaryText: 'hsl(0,0%,100%)',
   secondary: 'hsl(180,20%,97.1%)',
   active: 'hsl(154.4,47.1%,65.9%)',
