@@ -1,0 +1,21 @@
+name: Gatsby
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master, develop ] 
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+      with:
+        persist-credentials: false
+    - name: Install and Build
+      working-directory: ./app
+      run: |
+        npm install
+        npm run test
+        npm run build
