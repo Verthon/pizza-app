@@ -6,9 +6,7 @@ export interface ITheme {
   shadow: typeof shadow
   breakpoints: typeof breakpoints
   spacing: typeof spacing
-  logo: {
-    width: string
-  },
+  logo: typeof logo
   border: typeof border
   flexColumnMixin: string
 }
@@ -35,8 +33,8 @@ const shadow = {
 }
 
 const colors = {
-  primary50: '#CCE8FF',
-  primary100: '#B2DCFF',
+  primary50: '#EFF6FF',
+  primary100: '#DBEAFE',
   primary200: '#7FC5FF',
   primary300: '#4CAEFF',
   primary400: '#1998FF',
@@ -45,6 +43,15 @@ const colors = {
   primary700: '#00467F',
   primary800: '#002A4C',
   primary900: '#000E19',
+  blueGrey100: '#F8FAFC',
+  blueGrey200: '#F1F5F9',
+  blueGrey300: '#E2E8F0',
+  blueGrey400: '#CBD5E1',
+  blueGrey500: '#94A3B8',
+  blueGrey600: '#64748B',
+  blueGrey700: '#334155',
+  blueGrey800: '#1E293B',
+  blueGrey900: '#0F172A',
   primaryText: 'hsl(0,0%,100%)',
   secondary: 'hsl(180,20%,97.1%)',
   active: 'hsl(154.4,47.1%,65.9%)',
@@ -80,9 +87,9 @@ const breakpoints = {
 }
 
 const spacing = {
-  xxs: '0',
-  xs: '0.25rem',
-  sm: '0.5rem',
+  xxs: '0.25rem',
+  xs: '0.5rem',
+  sm: '0.75rem',
   md: '1rem',
   lg: '1.5rem',
   xl: '3rem',

@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
     "jsx": "react",
     "target": "es5",
     "module": "commonjs",
@@ -13,7 +12,4 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "src"
-  ]
 }
