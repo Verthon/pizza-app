@@ -49,5 +49,5 @@ export default {
       topping2: "toppings.2.name",
       topping3: "toppings.3.name"
     }
-  }
+  },
 }

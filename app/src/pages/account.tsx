@@ -4,7 +4,7 @@ import { Layout } from "../components/Layout/Layout"
 function AccountPage() {
   return (
     <Layout>
-      <p>About page</p>
+      <p>Account page</p>
     </Layout>
   )
 }

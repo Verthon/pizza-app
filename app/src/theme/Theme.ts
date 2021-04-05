@@ -64,6 +64,10 @@ const border = {
   defaultRadius: '10px'
 }
 
+export const mediaQueries = (key: keyof typeof breakpoints) => {
+  return (style: TemplateStringsArray | String) =>
+    `@media (min-width: ${breakpoints[key]}em) { ${style} }`;
+};
 
 const shadow = {
   default: '0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);',
@@ -124,7 +128,7 @@ const logo = {
   width: '120px'
 }
 
-export const theme: ITheme = {
+export const theme: ITheme = Object.freeze({
   colors: colors,
   fontSizes: fontSizes,
   fontFamily: fontFamily,
@@ -135,4 +139,4 @@ export const theme: ITheme = {
   logo: logo,
   border: border,
   flexColumnMixin: flexColumnMixin,
-}
+})

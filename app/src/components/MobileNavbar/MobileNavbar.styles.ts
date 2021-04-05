@@ -8,6 +8,7 @@ export const MobileNavbarContainer = styled.nav`
   bottom: 0;
   padding: 0.75rem 1.5rem;
   box-shadow: ${({theme}: Theme ) => theme.shadow.default};
+  background-color: ${({theme}: Theme ) => theme.colors.white};
   border-top: 1px solid ${({theme}: Theme ) => theme.colors.grey300};
 `
 
