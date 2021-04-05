@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useWindowSize } from "../../hooks/useWindowSize/useWindowSize"
-import { theme } from "../../theme/Theme";
+import { theme } from "../../theme/theme";
 
 import { MobileNavbar } from "../MobileNavbar/MobileNavbar"
 import { Styled } from "./Navbar.styles"

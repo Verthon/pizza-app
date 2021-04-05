@@ -1,56 +1,13 @@
 export interface ITheme {
-  colors: {
-    primary: string,
-    primaryText: string,
-    secondary: string,
-    active: string,
-    text: string,
-    white: string,
-    warning: string,
-    gray2: string,
-    grey300: string,
-    iconColor: string,
-    dark: string
-  },
-  fontSizes: {
-    title: string,
-    regular: string,
-    small: string
-  },
-  fontFamily: {
-    main: string
-  },
-  fontWeights: {
-    black: number,
-    bold: number,
-    regular: number,
-  },
-  shadow: {
-    default: string,
-    category: string
-  },
-  breakpoints: {
-    xs: number,
-    sm: number,
-    md: number,
-    lg: number,
-    xl: number
-  },
-  spacing: {
-    xxs: string,
-    xs: string,
-    sm: string,
-    md: string,
-    lg: string,
-    xl: string,
-    title: string
-  },
-  logo: {
-    width: string
-  },
-  border: {
-    defaultRadius: string
-  },
+  colors: typeof colors
+  fontSizes: typeof fontSizes
+  fontFamily: typeof fontFamily
+  fontWeights: typeof fontWeights
+  shadow: typeof shadow
+  breakpoints: typeof breakpoints
+  spacing: typeof spacing
+  logo: typeof logo
+  border: typeof border
   flexColumnMixin: string
 }
 
@@ -61,9 +18,14 @@ export type Theme = {
 const flexColumnMixin = 'display: flex; flex-direction: column'
 
 const border = {
-  defaultRadius: '10px'
+  defaultRadius: '10px',
+  smRadius: '2px'
 }
 
+export const mediaQueries = (key: keyof typeof breakpoints) => {
+  return (style: TemplateStringsArray | String) =>
+    `@media (min-width: ${breakpoints[key]}em) { ${style} }`;
+};
 
 const shadow = {
   default: '0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);',
@@ -71,7 +33,25 @@ const shadow = {
 }
 
 const colors = {
+  primary50: '#EFF6FF',
+  primary100: '#DBEAFE',
+  primary200: '#7FC5FF',
+  primary300: '#4CAEFF',
+  primary400: '#1998FF',
   primary: '#007EE5',
+  primary600: '#0062B2',
+  primary700: '#00467F',
+  primary800: '#002A4C',
+  primary900: '#000E19',
+  blueGrey100: '#F8FAFC',
+  blueGrey200: '#F1F5F9',
+  blueGrey300: '#E2E8F0',
+  blueGrey400: '#CBD5E1',
+  blueGrey500: '#94A3B8',
+  blueGrey600: '#64748B',
+  blueGrey700: '#334155',
+  blueGrey800: '#1E293B',
+  blueGrey900: '#0F172A',
   primaryText: 'hsl(0,0%,100%)',
   secondary: 'hsl(180,20%,97.1%)',
   active: 'hsl(154.4,47.1%,65.9%)',
@@ -107,9 +87,9 @@ const breakpoints = {
 }
 
 const spacing = {
-  xxs: '0',
-  xs: '0.25rem',
-  sm: '0.5rem',
+  xxs: '0.25rem',
+  xs: '0.5rem',
+  sm: '0.75rem',
   md: '1rem',
   lg: '1.5rem',
   xl: '3rem',
@@ -124,7 +104,7 @@ const logo = {
   width: '120px'
 }
 
-export const theme: ITheme = {
+export const theme: ITheme = Object.freeze({
   colors: colors,
   fontSizes: fontSizes,
   fontFamily: fontFamily,
@@ -135,4 +115,4 @@ export const theme: ITheme = {
   logo: logo,
   border: border,
   flexColumnMixin: flexColumnMixin,
-}
+})
