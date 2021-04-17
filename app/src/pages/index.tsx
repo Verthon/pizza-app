@@ -7,7 +7,6 @@ import { Coupon } from "../components/Coupon/Coupon";
 import { PizzaList } from "../components/PizzaList/PizzaList";
 import { Pizzas } from "../api/types";
 
-// markup
 function IndexPage({ data }: { data: Pizzas }) {
   console.log(data);
   return (

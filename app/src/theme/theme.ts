@@ -19,7 +19,7 @@ const flexColumnMixin = 'display: flex; flex-direction: column'
 
 const border = {
   defaultRadius: '10px',
-  smRadius: '2px'
+  smRadius: '5px'
 }
 
 export const mediaQueries = (key: keyof typeof breakpoints) => {

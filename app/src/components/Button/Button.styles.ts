@@ -1,15 +1,13 @@
 import styled from "styled-components"
-import { ITheme } from "../../theme/theme"
-import { Variant } from "./Button.types"
+import { SProps, Variant } from "./Button.types"
 
-const Button = styled.button`
-  background-color: ${({theme, variant}: { theme: ITheme, variant: Variant } ) => {
-    if(variant === Variant.primary) {
-      return theme.colors.primary
+const Button = styled.button<SProps>`
+  background-color: ${(props) => {
+    if(props.variant === Variant.primary) {
+      return props.theme.colors.primary
     }
-
-
-  }}
+  }};
+  border-radius: ${({theme}) => theme.border.defaultRadius};
 `
 
 export const Styled = {

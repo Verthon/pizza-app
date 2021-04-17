@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Margin } from "../../shared/types/Styles.types"
 import { Theme } from "../../theme/theme"
 
 const Container = styled.div`
