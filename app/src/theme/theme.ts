@@ -6,9 +6,9 @@ export interface ITheme {
   shadow: typeof shadow
   breakpoints: typeof breakpoints
   spacing: typeof spacing
-  logo: typeof logo
   border: typeof border
-  flexColumnMixin: string
+  flexColumnMixin: string,
+  headerFontSizes: typeof headerFontSizes
 }
 
 export type Theme = {
@@ -72,6 +72,15 @@ const fontSizes = {
   small: '0.875rem'
 }
 
+const headerFontSizes = {
+  xs: "1rem",
+  sm: "1.25rem",
+  md: "1.5rem",
+  lg: "1.75rem",
+  xl: "2rem",
+  xxl: "2.5rem",
+}
+
 const fontWeights = {
   black: 800,
   bold: 600,
@@ -100,19 +109,15 @@ const fontFamily = {
   main: "-apple-system, BlinkMacSystemFont, 'Signika', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;"
 }
 
-const logo = {
-  width: '120px'
-}
-
 export const theme: ITheme = Object.freeze({
-  colors: colors,
-  fontSizes: fontSizes,
-  fontFamily: fontFamily,
-  fontWeights: fontWeights,
-  shadow: shadow,
-  breakpoints: breakpoints,
-  spacing: spacing,
-  logo: logo,
+  colors,
+  fontSizes,
+  fontFamily,
+  fontWeights,
+  shadow,
+  breakpoints,
+  spacing,
   border: border,
-  flexColumnMixin: flexColumnMixin,
+  flexColumnMixin,
+  headerFontSizes
 })
