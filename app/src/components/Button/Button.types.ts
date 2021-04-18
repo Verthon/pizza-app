@@ -5,9 +5,8 @@ export enum Variant {
 
 export type Props = {
   variant: Variant
-  children: React.ReactNode
-}
+  loading: boolean
+  type?: "button" | "submit" | "reset"
+} & React.HTMLProps<HTMLButtonElement>
 
-export type SProps = {
-  variant: Variant
-}
+export type SProps = Omit<Props, "children">

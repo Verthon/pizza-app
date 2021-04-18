@@ -7,6 +7,7 @@ function LoginPage() {
   return (
     <Layout>
       <Heading level={1}>Login page</Heading>
+      <p>add your details to login</p>
     </Layout>
   )
 }
