@@ -18,8 +18,8 @@ export type Theme = {
 const flexColumnMixin = 'display: flex; flex-direction: column'
 
 const border = {
-  defaultRadius: '10px',
-  smRadius: '5px'
+  defaultRadius: '5px',
+  smRadius: '2px'
 }
 
 export const mediaQueries = (key: keyof typeof breakpoints) => {
@@ -67,9 +67,13 @@ const colors = {
 }
 
 const fontSizes = {
-  title: '1.35rem',
-  regular: '1rem',
-  small: '0.875rem'
+  title: '1.5rem',
+  xs: '0.75rem',
+  sm: '0.875rem',
+  md: '1rem',
+  lg: '1.25rem',
+  xl: '1.5rem',
+  xxl: '1.75rem',
 }
 
 const headerFontSizes = {
