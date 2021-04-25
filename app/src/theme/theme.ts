@@ -38,7 +38,7 @@ const colors = {
   primary200: '#7FC5FF',
   primary300: '#4CAEFF',
   primary400: '#1998FF',
-  primary: '#007EE5',
+  primary: '#000EE6',
   primary600: '#0062B2',
   primary700: '#00467F',
   primary800: '#002A4C',
