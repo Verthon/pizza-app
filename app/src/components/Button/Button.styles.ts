@@ -8,6 +8,14 @@ const Button = styled.button<SProps>`
     }
   }};
   border-radius: ${({theme}) => theme.border.defaultRadius};
+  border: 0;
+  padding: ${({theme}) => theme.spacing.sm};
+  color: ${({theme}) => theme.colors.white};
+  font-weight: 600;
+
+  &:disabled {
+    background-color: ${({theme}) => theme.colors.primary100};
+  }
 `
 
 export const Styled = {

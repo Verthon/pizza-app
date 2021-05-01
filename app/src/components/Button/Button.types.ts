@@ -4,8 +4,8 @@ export enum Variant {
 }
 
 export type Props = {
-  variant: Variant
-  loading: boolean
+  variant?: Variant
+  loading?: boolean
   type?: "button" | "submit" | "reset"
 } & React.HTMLProps<HTMLButtonElement>
 
