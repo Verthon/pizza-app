@@ -17,6 +17,19 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  #___gatsby, #gatsby-focus-wrapper {
+    height: 100%;
+  }
+
   a {
     color: inherit;
     text-decoration: none;

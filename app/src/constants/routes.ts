@@ -5,5 +5,6 @@ export const ROUTES = {
   menu: "/menu",
   delivery: "/delivery",
   login: "/login",
+  register: "/register",
   account: "/account",
 }

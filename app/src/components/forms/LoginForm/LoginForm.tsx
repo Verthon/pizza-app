@@ -28,6 +28,8 @@ export const LoginForm = () => {
     console.log(data);
   }
 
+  const isDisabled = !formState.isValid && formState.isSubmitting
+
   return (
     <Styled.Form onSubmit={handleSubmit((onSubmit))} noValidate>
       <InputField 
@@ -44,7 +46,7 @@ export const LoginForm = () => {
         control={control} 
         placeholder="Your password"
       />
-      <Button type="submit" disabled={!formState.isValid} loading={formState.isSubmitting}>Login</Button>
+      <Button type="submit" disabled={isDisabled} loading={formState.isSubmitting}>Login</Button>
     </Styled.Form>
   )
 }

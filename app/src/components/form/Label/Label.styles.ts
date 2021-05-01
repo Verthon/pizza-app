@@ -3,7 +3,7 @@ import { SProps } from "./Label.types"
 
 const Label = styled.label<SProps>`
   font-size: ${({theme}) => theme.fontSizes.sm};
-  color: ${({theme}) => theme.colors.blueGrey800};
+  color: ${({theme}) => theme.colors.blueGrey700};
 `
 
 export const Styled = {

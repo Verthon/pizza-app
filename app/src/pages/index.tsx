@@ -8,7 +8,6 @@ import { PizzaList } from "../components/PizzaList/PizzaList";
 import { Pizzas } from "../api/types";
 
 function IndexPage({ data }: { data: Pizzas }) {
-  console.log(data);
   return (
     <Layout>
       <h1>Mighty Pizza</h1>

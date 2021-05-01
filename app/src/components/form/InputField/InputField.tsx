@@ -21,7 +21,8 @@ export const InputField = ({ name, label, disabled, maxLength, placeholder, type
             onChange={onChange}
             value={value}
             placeholder={placeholder}
-            disabled={disabled} maxLength={maxLength}
+            disabled={disabled} 
+            maxLength={maxLength}
             error={error}
           />}
         rules={{

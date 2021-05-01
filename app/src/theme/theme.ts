@@ -38,7 +38,7 @@ const colors = {
   primary200: '#7FC5FF',
   primary300: '#4CAEFF',
   primary400: '#1998FF',
-  primary: '#000EE6',
+  primary: '#3366FF',
   primary600: '#0062B2',
   primary700: '#00467F',
   primary800: '#002A4C',
@@ -52,6 +52,12 @@ const colors = {
   blueGrey700: '#334155',
   blueGrey800: '#1E293B',
   blueGrey900: '#0F172A',
+  grey200: '#FAFAFC',
+  grey300: '#F2F2F5',
+  grey400: '#EBEBF0',
+  grey500: '#E3E4EB',
+  grey600: '#e5e7ea',
+  grey700: '#a5abbd',
   primaryText: 'hsl(0,0%,100%)',
   secondary: 'hsl(180,20%,97.1%)',
   active: 'hsl(154.4,47.1%,65.9%)',
@@ -59,11 +65,11 @@ const colors = {
   white: 'hsl(0,0%,100%)',
   warning: 'hsl(350, 69%, 36%)',
   grey100: '#f5f9ff',
-  grey300: '#e5e7ea',
-  grey400: '#a5abbd',
   iconColor: '#b4aea5',
   gray2: 'hsl(240,5%,84.3%)',
-  dark: "#252525"
+  dark: "#252525",
+  facebook: "#4267B2",
+  google: "#de5246"
 }
 
 const fontSizes = {

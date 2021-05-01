@@ -9,13 +9,13 @@ const Button = styled.button<SProps>`
   }};
   border-radius: ${({theme}) => theme.border.defaultRadius};
   border: 0;
-  padding: ${({theme}) => theme.spacing.sm};
   color: ${({theme}) => theme.colors.white};
+  height: ${(props) => props.height}px;
   font-weight: 600;
-
   &:disabled {
-    background-color: ${({theme}) => theme.colors.primary100};
+    background-color: ${({theme}) => theme.colors.grey400};
   }
+  cursor: pointer;
 `
 
 export const Styled = {
