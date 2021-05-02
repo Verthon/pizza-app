@@ -6,16 +6,19 @@ import { InfoBar } from "../components/InfoBar/InfoBar";
 import { Coupon } from "../components/Coupon/Coupon";
 import { PizzaList } from "../components/PizzaList/PizzaList";
 import { Pizzas } from "../api/types";
+import { AppProviders } from "../providers/AppProviders/AppProviders";
 
 function IndexPage({ data }: { data: Pizzas }) {
   return (
-    <Layout>
-      <h1>Mighty Pizza</h1>
-      <InfoBar text="250 Straconki, Bielsko - Biala, 43-300" />
-      <Coupon discount={50} text="for your next order" />
-      <h2>Top this weekend</h2>
-      <PizzaList pizzas={data.pizzas.nodes} />
-    </Layout>
+    <AppProviders>
+      <Layout>
+        <h1>Mighty Pizza</h1>
+        <InfoBar text="250 Straconki, Bielsko - Biala, 43-300" />
+        <Coupon discount={50} text="for your next order" />
+        <h2>Top this weekend</h2>
+        <PizzaList pizzas={data.pizzas.nodes} />
+      </Layout>
+    </AppProviders>
   );
 }
 
