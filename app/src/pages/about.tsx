@@ -1,13 +1,16 @@
-import * as React from "react"
-import { Layout } from "../components/Layout/Layout"
+import * as React from "react";
+import { Layout } from "../components/Layout/Layout";
+import { AppProviders } from "../providers/AppProviders/AppProviders";
 
 // markup
 function AboutPage() {
   return (
-    <Layout>
-      <p>About page</p>
-    </Layout>
-  )
+    <AppProviders>
+      <Layout>
+        <p>About page</p>
+      </Layout>
+    </AppProviders>
+  );
 }
 
-export default AboutPage
+export default AboutPage;
