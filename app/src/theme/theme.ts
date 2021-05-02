@@ -6,9 +6,9 @@ export interface ITheme {
   shadow: typeof shadow
   breakpoints: typeof breakpoints
   spacing: typeof spacing
-  logo: typeof logo
   border: typeof border
-  flexColumnMixin: string
+  flexColumnMixin: string,
+  headerFontSizes: typeof headerFontSizes
 }
 
 export type Theme = {
@@ -18,7 +18,7 @@ export type Theme = {
 const flexColumnMixin = 'display: flex; flex-direction: column'
 
 const border = {
-  defaultRadius: '10px',
+  defaultRadius: '5px',
   smRadius: '2px'
 }
 
@@ -38,7 +38,7 @@ const colors = {
   primary200: '#7FC5FF',
   primary300: '#4CAEFF',
   primary400: '#1998FF',
-  primary: '#007EE5',
+  primary: '#3366FF',
   primary600: '#0062B2',
   primary700: '#00467F',
   primary800: '#002A4C',
@@ -52,6 +52,12 @@ const colors = {
   blueGrey700: '#334155',
   blueGrey800: '#1E293B',
   blueGrey900: '#0F172A',
+  grey200: '#FAFAFC',
+  grey300: '#F2F2F5',
+  grey400: '#EBEBF0',
+  grey500: '#E3E4EB',
+  grey600: '#e5e7ea',
+  grey700: '#a5abbd',
   primaryText: 'hsl(0,0%,100%)',
   secondary: 'hsl(180,20%,97.1%)',
   active: 'hsl(154.4,47.1%,65.9%)',
@@ -59,17 +65,30 @@ const colors = {
   white: 'hsl(0,0%,100%)',
   warning: 'hsl(350, 69%, 36%)',
   grey100: '#f5f9ff',
-  grey300: '#e5e7ea',
-  grey400: '#a5abbd',
   iconColor: '#b4aea5',
   gray2: 'hsl(240,5%,84.3%)',
-  dark: "#252525"
+  dark: "#252525",
+  facebook: "#4267B2",
+  google: "#de5246"
 }
 
 const fontSizes = {
-  title: '1.35rem',
-  regular: '1rem',
-  small: '0.875rem'
+  title: '1.5rem',
+  xs: '0.75rem',
+  sm: '0.875rem',
+  md: '1rem',
+  lg: '1.25rem',
+  xl: '1.5rem',
+  xxl: '1.75rem',
+}
+
+const headerFontSizes = {
+  xs: "1rem",
+  sm: "1.25rem",
+  md: "1.5rem",
+  lg: "1.75rem",
+  xl: "2rem",
+  xxl: "2.5rem",
 }
 
 const fontWeights = {
@@ -100,19 +119,15 @@ const fontFamily = {
   main: "-apple-system, BlinkMacSystemFont, 'Signika', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;"
 }
 
-const logo = {
-  width: '120px'
-}
-
 export const theme: ITheme = Object.freeze({
-  colors: colors,
-  fontSizes: fontSizes,
-  fontFamily: fontFamily,
-  fontWeights: fontWeights,
-  shadow: shadow,
-  breakpoints: breakpoints,
-  spacing: spacing,
-  logo: logo,
+  colors,
+  fontSizes,
+  fontFamily,
+  fontWeights,
+  shadow,
+  breakpoints,
+  spacing,
   border: border,
-  flexColumnMixin: flexColumnMixin,
+  flexColumnMixin,
+  headerFontSizes
 })
