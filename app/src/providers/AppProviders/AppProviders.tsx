@@ -9,6 +9,7 @@ import { Props } from "./AppProviders.types";
 import { FirebaseProvider } from "../FirebaseProvider/FirebaseProvider";
 
 export const AppProviders = ({ children }: Props) => {
+
   return (
     <FirebaseProvider>
       <StoreProvider>

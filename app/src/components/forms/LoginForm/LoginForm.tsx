@@ -7,8 +7,11 @@ import { InputField } from "../../form/InputField/InputField"
 import { Styled } from "./LoginForm.styles"
 import { State } from "./LoginForm.types";
 import { Button } from "../../Button/Button";
+import { useFirebase } from "../../../hooks/useFirebase/useFirebase";
 
 export const LoginForm = () => {
+
+  const { login } = useFirebase()
 
   const schema = z.object({
     email: z.string().email({ message: 'Invalid email address.' }),
@@ -24,8 +27,11 @@ export const LoginForm = () => {
     }
   });
 
-  const onSubmit = (data: State) => {
-    console.log(data);
+  const onSubmit = async (data: State) => {
+    if(data.email && data.password) {
+      await login(data.email, data.password)
+    }
+
   }
 
   const isDisabled = !formState.isValid && formState.isSubmitting
