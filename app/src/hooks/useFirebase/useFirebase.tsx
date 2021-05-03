@@ -2,7 +2,7 @@ import * as React from "react"
 import { useDispatch, useSelector } from 'react-redux'
 
 import { FirebaseContext } from "../../providers/FirebaseProvider/FirebaseProvider";
-import { login, selectCurrentUser } from "../../reducers/auth";
+import { login, logout as logoutAction, selectCurrentUser, setAuthLoading } from "../../reducers/auth";
 
 export const useFirebase = () => {
   const firebaseApp = React.useContext(FirebaseContext);
@@ -15,10 +15,11 @@ export const useFirebase = () => {
   const currentUser = useSelector(selectCurrentUser)
   React.useEffect(() => {
     const setUser = (user: { uid: string; email: any; displayName: any; photoURL: any; } | null) => {
+      dispatch(setAuthLoading({ loading: true }));
       if (user) {
         dispatch(login({ uid: user.uid, email: user.email, name: user.displayName, avatar: user.photoURL}))
       } else {
-        dispatch(logout())
+        dispatch(logoutAction())
       }
     }
     const unsubscribe = firebaseApp.auth().onAuthStateChanged(setUser)

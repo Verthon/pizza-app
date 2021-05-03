@@ -11,7 +11,7 @@ const HEIGHT = Object.freeze({
   large: 48,
 })
 
-export const Button = ({ variant = Variant.primary, children, $loading = false, type = "submit", disabled = false, size = "medium", outline }: Props) => {
+export const Button = ({ variant = Variant.primary, children, $loading = false, type = "submit", disabled = false, size = "medium", outline, onClick }: Props) => {
   const setHeight = () =>  {
     const key = Object.keys(HEIGHT).find(key =>  key === size);
     if (key) {
@@ -23,7 +23,7 @@ export const Button = ({ variant = Variant.primary, children, $loading = false, 
   const height = setHeight();
   const spinnerColor = outline ? theme.colors.primary : theme.colors.white;
   return (
-    <Styled.Button variant={variant} $loading={$loading} type={type} disabled={disabled} height={height}>
+    <Styled.Button variant={variant} $loading={$loading} type={type} disabled={disabled} height={height} onClick={onClick}>
       {$loading ? <Spinner width={height - 5} height={height - 5} color={spinnerColor} /> : children}
     </Styled.Button>
   )
