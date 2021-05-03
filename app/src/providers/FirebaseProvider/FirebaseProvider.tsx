@@ -18,7 +18,6 @@ const firebaseConfig = {
   measurementId: process.env.GATSBY_FIRESTORE_MESURMENT_ID,
 };
 
-console.log({ firebaseConfig });
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 export const FirebaseProvider = ({ children }: Props) => {

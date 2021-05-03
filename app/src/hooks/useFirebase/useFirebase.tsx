@@ -34,8 +34,8 @@ export const useFirebase = () => {
     return await firebaseApp.auth().updateCurrentUser(user)
   }
 
-  const logout = async () => {
-    return await firebaseApp.auth().signOut()
+  const logout = () => {
+    return firebaseApp.auth().signOut()
   }
 
   const loginWithEmail = (email: string, password: string) => {
@@ -45,7 +45,7 @@ export const useFirebase = () => {
   return {
     getUser: () => getUser,
     updateUser: ()=> updateUser,
-    logout: () => logout,
+    logout: () => logout(),
     login: (email: string, password: string) => loginWithEmail(email, password),
     currentUser
   }

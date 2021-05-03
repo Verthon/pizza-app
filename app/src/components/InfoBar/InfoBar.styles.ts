@@ -1,11 +1,22 @@
 import styled from "styled-components"
+import { SProps } from "./InfoBar.types"
 
-const Container = styled.div`
-  border-radius: ${({theme} ) => theme.border.defaultRadius};
-  background-color: ${({theme} ) => theme.colors.blueGrey200};
-  color: ${({theme} ) => theme.colors.blueGrey700};
+const Container = styled.div<SProps>`
+  background-color: ${(props) => {
+    if(props.type === "error") {
+      return props.theme.colors.danger600;
+    }
+    return props.theme.colors.blueGrey200
+  }};
+  color: ${(props) => {
+    if(props.type === "error") {
+      //return props.theme.colors.danger900
+      return props.theme.colors.white
+    }
+    return props.theme.colors.blueGrey700}
+  };
   text-align: center;
-  padding: ${({theme} ) => theme.spacing.sm};
+  padding: ${({ theme }) => theme.spacing.sm};
 `
 
 export const Styled = {
