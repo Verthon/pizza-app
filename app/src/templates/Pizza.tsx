@@ -1,20 +1,30 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
 
 import { Styled } from "./Pizza.styles";
 import { Props } from "./Pizza.types";
 import { AppProviders } from "../providers/AppProviders/AppProviders";
+import { LayoutDetails } from "../layouts/LayoutDetails/LayoutDetails";
+import { formatPrice } from "../utils/numbers";
+import { sizes } from "../constants/pizza";
 
 export default function SinglePizzaPage({ data: { pizza } }: Props) {
-  console.log(pizza);
+  const [activeSize, setActiveSize] = React.useState(sizes.M);
+  const isSizeActive = (size: string) => {
+    return activeSize === size
+  }
   return (
     <AppProviders>
-      {" "}
-      <Styled.Container>
+      <LayoutDetails buttonText="Add to cart" title={pizza.name}>
         <Styled.Image fluid={pizza.image.asset.fluid} />
         <Styled.Title>{pizza.name}</Styled.Title>
-      </Styled.Container>
+        <Styled.SizeWrapper>
+          <Styled.SizeButton active={isSizeActive(sizes.S)} onClick={() => setActiveSize(sizes.S)}>{sizes.S}</Styled.SizeButton>
+          <Styled.SizeButton active={isSizeActive(sizes.M)} onClick={() => setActiveSize(sizes.M)}>{sizes.M}</Styled.SizeButton>
+          <Styled.SizeButton active={isSizeActive(sizes.L)} onClick={() => setActiveSize(sizes.L)}>{sizes.L}</Styled.SizeButton>
+        </Styled.SizeWrapper>
+        <Styled.Price>{formatPrice(pizza.price)}</Styled.Price>
+      </LayoutDetails>
     </AppProviders>
   );
 }
