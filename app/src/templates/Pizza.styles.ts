@@ -18,12 +18,19 @@ const Image = styled(Img)<ImageProps>`
 const Price = styled.p`
   color: ${({theme}) => theme.colors.blueGrey800};
   font-size: ${({theme}) => theme.fontSizes.xl};
+  text-align: center;
+  font-weight: bold;
+  margin: 0.5rem 0;
 `
 
 const SizeWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
+`
+
+const SizeDescription = styled.p`
+  color: ${({theme}) => theme.colors.blueGrey700};
 `
 
 const SizeButton = styled.button<Size>`
@@ -42,4 +49,5 @@ export const Styled = {
   Price,
   SizeButton,
   SizeWrapper,
+  SizeDescription
 }
