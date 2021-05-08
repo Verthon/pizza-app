@@ -10,6 +10,7 @@ export const MobileNavbarContainer = styled.nav`
   box-shadow: ${({theme}: Theme ) => theme.shadow.default};
   background-color: ${({theme}: Theme ) => theme.colors.white};
   border-top: 1px solid ${({theme}: Theme ) => theme.colors.grey300};
+  z-index: 1;
 `
 
 export const MobileNavbarList = styled.ul`

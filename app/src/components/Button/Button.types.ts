@@ -9,7 +9,7 @@ export type Props = {
   variant?: Variant
   $loading?: boolean
   type?: "button" | "submit" | "reset"
-  size?: Size
+  $size?: Size
   outline?: boolean
 } & React.HTMLProps<HTMLButtonElement>
 
