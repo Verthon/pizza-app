@@ -11,9 +11,9 @@ const HEIGHT = Object.freeze({
   large: 48,
 })
 
-export const Button = ({ variant = Variant.primary, children, $loading = false, type = "submit", disabled = false, size = "medium", outline, onClick }: Props) => {
+export const Button = ({ variant = Variant.primary, children, $loading = false, type = "submit", disabled = false, $size = "medium", outline, onClick }: Props) => {
   const setHeight = () =>  {
-    const key = Object.keys(HEIGHT).find(key =>  key === size);
+    const key = Object.keys(HEIGHT).find(key =>  key === $size);
     if (key) {
       return HEIGHT[key];
     }

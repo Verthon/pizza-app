@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { Heading } from "../components/Heading/Heading";
-import { Layout } from "../components/Layout/Layout";
+import { Layout } from "../layouts/Layout/Layout";
 import { Text } from "../components/Text/Text";
 import { AppProviders } from "../providers/AppProviders/AppProviders";
 

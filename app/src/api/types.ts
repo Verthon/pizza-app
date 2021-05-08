@@ -1,3 +1,5 @@
+import { FluidObject, FixedObject } from "gatsby-image"
+
 export type PizzaNode = {
   id: string,
   name: string,
@@ -5,28 +7,25 @@ export type PizzaNode = {
     current: string,
   }
   toppings: Topping[],
-  image: Image,
+  image: {
+    asset: ImageProps
+  }
   price: number,
 }
 
 export type Topping = {
   id: string,
   name: string
-}
-
-export type Image = {
-  asset: {
-    fluid: {
-      base64: string,
-      src: string,
-      srcSetWebp: string,
-      srcWebp: string,
-    }
-  }
+  vegetarian: boolean | null
 }
 
 export type Pizzas = {
   pizzas: {
     nodes: PizzaNode[],
   }
+}
+
+export type ImageProps = {
+  fluid?: FluidObject | FluidObject[]
+  fixed?: FixedObject | FixedObject[]
 }

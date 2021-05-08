@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { LoginForm } from "../components/forms/LoginForm/LoginForm";
 import { Heading } from "../components/Heading/Heading";
-import { Layout } from "../components/Layout/Layout";
+import { Layout } from "../layouts/Layout/Layout";
 import { Link } from "../components/Link/Link";
 import { SocialButton } from "../components/SocialButton/SocialButton";
 import { Provider } from "../components/SocialButton/SocialButton.types";

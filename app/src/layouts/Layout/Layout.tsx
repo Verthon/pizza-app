@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import { Navbar } from "../Navbar/Navbar";
-import { Container } from "../Container/Container";
+import { Navbar } from "../../components/Navbar/Navbar";
+import { Container } from "../../components/Container/Container";
 import { Props } from "./Layout.types";
-import { InfoBar } from "../InfoBar/InfoBar";
+import { InfoBar } from "../../components/InfoBar/InfoBar";
 import { useAppState } from "../../hooks/useAppState/useAppState";
 
 export function Layout({ children }: Props) {
