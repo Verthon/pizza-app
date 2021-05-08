@@ -7,7 +7,7 @@ type Size = "xsmall" | "small" | "medium" | "large"
 
 export type Props = {
   variant?: Variant
-  loading?: boolean
+  $loading?: boolean
   type?: "button" | "submit" | "reset"
   size?: Size
   outline?: boolean
