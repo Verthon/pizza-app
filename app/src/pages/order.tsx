@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Layout } from "../components/Layout/Layout";
+import { Layout } from "../layouts/Layout/Layout";
 import { AppProviders } from "../providers/AppProviders/AppProviders";
 
 // markup

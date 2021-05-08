@@ -2,7 +2,7 @@ import { graphql } from "gatsby";
 import * as React from "react";
 
 import { Pizzas } from "../api/types";
-import { Layout } from "../components/Layout/Layout";
+import { Layout } from "../layouts/Layout/Layout";
 import { PizzaList } from "../components/PizzaList/PizzaList";
 import { AppProviders } from "../providers/AppProviders/AppProviders";
 
@@ -33,11 +33,11 @@ export const query = graphql`
         price
         image {
           asset {
-            fluid(maxWidth: 400, maxHeight: 207) {
-              base64
-              srcWebp
-              srcSetWebp
-              src
+            fixed(width: 600, height: 200) {
+              ...GatsbySanityImageFixed
+            }
+            fluid(maxWidth: 400) {
+              ...GatsbySanityImageFluid
             }
           }
         }
