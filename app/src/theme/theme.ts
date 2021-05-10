@@ -123,6 +123,15 @@ const breakpoints = {
   xl: 1200
 }
 
+export const device = {
+  xs: `(min-width: ${breakpoints.xs}px)`,
+  sm: `(min-width: ${breakpoints.sm}px)`,
+  md: `(min-width: ${breakpoints.md}px)`,
+  lg: `(min-width: ${breakpoints.lg}px)`,
+  xl: `(min-width: ${breakpoints.xl}px)`,
+};
+
+
 const spacing = {
   xxs: '0.25rem',
   xs: '0.5rem',

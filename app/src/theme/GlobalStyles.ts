@@ -18,11 +18,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    height: 100%;
   }
 
   body {
-    height: 100%;
     padding-bottom: env(safe-area-inset-bottom);
   }
 

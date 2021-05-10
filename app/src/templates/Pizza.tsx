@@ -15,7 +15,7 @@ const SIZE_IN_CM = {
 }
 
 export default function SinglePizzaPage({ data: { pizza } }: Props) {
-  const [activeSize, setActiveSize] = React.useState(sizes.M);
+  const [activeSize, setActiveSize] = React.useState<keyof typeof sizes>("M");
   const isSizeActive = (size: string) => {
     return activeSize === size
   }
