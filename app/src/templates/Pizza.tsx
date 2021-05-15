@@ -39,6 +39,7 @@ export default function SinglePizzaPage({ data: { pizza } }: Props) {
 export const query = graphql`
   query($slug: String!) {
     pizza: sanityPizza(slug: { current: { eq: $slug } }) {
+      id,
       name
       price
       image {

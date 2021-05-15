@@ -1,10 +1,10 @@
 import { navigate } from "gatsby";
 import * as React from "react";
 
-import { Button } from "../../components/Button/Button";
 import { CartIcon } from "../../components/icons/Cart";
 import { ChevronRightIcon } from "../../components/icons/ChevronRight";
 import { ROUTES } from "../../constants/routes";
+import { DetailsFooter } from "../DetailsFooter/DetailsFooter";
 import { Styled } from "./LayoutDetails.styles";
 import { Props } from "./LayoutDetails.types";
 
@@ -13,7 +13,7 @@ export const LayoutDetails = ({ children, buttonText, title }: Props) => {
     navigate(-1)
   }
   const navigateToCart = () => {
-    navigate(ROUTES.cart)
+    navigate(ROUTES.order)
   }
   return (
     <Styled.Container>
@@ -23,9 +23,7 @@ export const LayoutDetails = ({ children, buttonText, title }: Props) => {
         <span onClick={navigateToCart}><CartIcon /></span>
       </Styled.Navbar>
       {children}
-      <Styled.Footer>
-        <Button $size="large">{buttonText}</Button>
-      </Styled.Footer>
+      <DetailsFooter buttonText={buttonText} />
     </Styled.Container>
   );
 };

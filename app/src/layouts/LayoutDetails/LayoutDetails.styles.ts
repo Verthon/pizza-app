@@ -26,16 +26,7 @@ const Navbar = styled.nav`
   }
 `
 
-const Footer = styled.footer`
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 4rem);
-  position: fixed;
-  bottom: 2rem;
-`
-
 export const Styled = {
   Container,
-  Navbar,
-  Footer
+  Navbar
 }
