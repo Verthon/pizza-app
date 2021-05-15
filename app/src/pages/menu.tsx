@@ -36,7 +36,7 @@ export const query = graphql`
             fixed(width: 600, height: 200) {
               ...GatsbySanityImageFixed
             }
-            fluid(maxWidth: 700) {
+            fluid(maxWidth: 700, maxHeight: 300) {
               ...GatsbySanityImageFluid
             }
           }

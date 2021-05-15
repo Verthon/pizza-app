@@ -13,7 +13,7 @@ function IndexPage({ data }: { data: Pizzas }) {
     <AppProviders>
       <Layout>
         <h1>Mighty Pizza</h1>
-        <InfoBar text="250 Straconki, Bielsko - Biala, 43-300" />
+        <InfoBar message="250 Straconki, Bielsko - Biala, 43-300" />
         <Coupon discount={50} text="for your next order" />
         <h2>Top this weekend</h2>
         <PizzaList pizzas={data.pizzas.nodes} />
@@ -39,7 +39,7 @@ export const query = graphql`
         price
         image {
           asset {
-            fluid(maxWidth: 700) {
+            fluid(maxWidth: 700 maxHeight: 300) {
               ...GatsbySanityImageFluid
             }
           }
