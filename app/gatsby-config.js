@@ -1,5 +1,7 @@
 require('dotenv').config({ path: "./env.local" })
 
+console.log( process.env.SANITY_TOKEN,  process.env);
+
 module.exports = {
   siteMetadata: {
     title: "pizza-app",
