@@ -43,9 +43,7 @@ export const query = graphql`
       price
       image {
         asset {
-          fluid(maxWidth: 800) {
-            ...GatsbySanityImageFluid
-          }
+          gatsbyImageData
         }
       }
       toppings {
