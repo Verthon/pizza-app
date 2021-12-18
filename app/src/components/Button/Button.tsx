@@ -4,21 +4,18 @@ import { Spinner } from "../icons/Spinner";
 import { Styled } from "./Button.styles";
 import { Props, Variant } from "./Button.types";
 
-const HEIGHT = Object.freeze({
+export const HEIGHT = Object.freeze({
   xsmall: 24,
   small: 32,
   medium: 40,
   large: 48,
-})
+} as const )
 
 export const Button = ({ variant = Variant.primary, children, $loading = false, type = "submit", disabled = false, $size = "medium", outline, onClick }: Props) => {
   const setHeight = () =>  {
-    const key = Object.keys(HEIGHT).find(key =>  key === $size);
-    if (key) {
-      return HEIGHT[key];
-    }
-
-    return HEIGHT["medium"]
+    const key = Object.keys(HEIGHT).some(key => key === $size) ? $size : "medium";
+    
+    return HEIGHT[key]
   }
   const height = setHeight();
   const spinnerColor = outline ? theme.colors.primary : theme.colors.white;

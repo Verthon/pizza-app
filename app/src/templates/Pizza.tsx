@@ -12,17 +12,17 @@ const SIZE_IN_CM = {
   S: 25,
   M: 35,
   L: 46
-}
+} as const
 
 export default function SinglePizzaPage({ data: { pizza } }: Props) {
-  const [activeSize, setActiveSize] = React.useState(sizes.M);
-  const isSizeActive = (size: string) => {
+  const [activeSize, setActiveSize] = React.useState<keyof typeof sizes>(sizes.M);
+  const isSizeActive = (size: keyof typeof sizes) => {
     return activeSize === size
   }
   return (
     <AppProviders>
       <LayoutDetails buttonText="Add to cart" title={pizza.name}>
-        <Styled.Image fluid={pizza.image.asset.fluid} />
+        <Styled.Image image={pizza.image.asset.gatsbyImageData} alt="" />
         <Styled.Title>{pizza.name}</Styled.Title>
         <Styled.SizeDescription>The diameter: {SIZE_IN_CM[activeSize]} cm</Styled.SizeDescription>
         <Styled.SizeWrapper>

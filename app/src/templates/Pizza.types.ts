@@ -1,5 +1,4 @@
-import { FluidObject } from "gatsby-image";
-import { Topping } from "../api/types";
+import { ImageProps, Topping } from "../api/types";
 
 export type Props = {
   data: {
@@ -7,10 +6,8 @@ export type Props = {
       name: string
       price: number,
       image: {
-        asset: {
-          fluid: FluidObject | FluidObject[]
-        }
-      }
+        asset: ImageProps
+      },
       toppings: Topping[]
     }
   }
