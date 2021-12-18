@@ -1,9 +1,11 @@
+import { HEIGHT } from "./Button";
+
 export enum Variant {
   primary = "primary",
   secondary = "secondary",
 }
 
-type Size = "xsmall" | "small" | "medium" | "large"
+type Size = keyof typeof HEIGHT;
 
 export type Props = {
   variant?: Variant

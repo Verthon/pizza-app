@@ -1,31 +1,30 @@
-import { FluidObject, FixedObject } from "gatsby-image"
+import { GatsbyImageProps } from "gatsby-image";
 
 export type PizzaNode = {
-  id: string,
-  name: string,
+  id: string;
+  name: string;
   slug: {
-    current: string,
-  }
-  toppings: Topping[],
+    current: string;
+  };
+  toppings: Topping[];
   image: {
-    asset: ImageProps
-  }
-  price: number,
-}
+    asset: ImageProps;
+  };
+  price: number;
+};
 
 export type Topping = {
-  id: string,
-  name: string
-  vegetarian: boolean | null
-}
+  id: string;
+  name: string;
+  vegetarian: boolean | null;
+};
 
 export type Pizzas = {
   pizzas: {
-    nodes: PizzaNode[],
-  }
-}
+    nodes: PizzaNode[];
+  };
+};
 
 export type ImageProps = {
-  fluid?: FluidObject | FluidObject[]
-  fixed?: FixedObject | FixedObject[]
-}
+  gatsbyImageData: any;
+};

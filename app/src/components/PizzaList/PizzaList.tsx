@@ -1,9 +1,9 @@
 import React from "react";
-import { PizzaNode } from "../../api/types";
 import { PizzaItem } from "../PizzaItem/PizzaItem";
 import { Styled } from "./PizzaList.styles";
+import type { Props } from "./PizzaList.types";
 
-export const PizzaList = ({ pizzas }: { pizzas: PizzaNode[] }) => {
+export const PizzaList = ({ pizzas }: Props) => {
   return (
     <Styled.Container>
       {pizzas.map((pizza) => (
