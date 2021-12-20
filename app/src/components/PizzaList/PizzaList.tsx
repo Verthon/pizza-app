@@ -1,4 +1,3 @@
-import * as React from "react"
 
 import { PizzaItem } from "../PizzaItem/PizzaItem";
 import { Styled } from "./PizzaList.styles";

@@ -1,5 +1,3 @@
-import * as React from "react"
-
 import { Props } from "./Heading.types"
 import { Styled } from "./Heading.styles"
 

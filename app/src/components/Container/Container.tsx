@@ -1,4 +1,3 @@
-import * as React from "react"
 
 import { Styled } from "../Container/Container.styles"
 import { Props } from "./Container.types"

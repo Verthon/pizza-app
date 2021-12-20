@@ -1,4 +1,3 @@
-import* as React from "react"
 import { Styled } from "./Text.styles";
 
 import { Props } from "./Text.types";

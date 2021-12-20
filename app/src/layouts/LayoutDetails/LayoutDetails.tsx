@@ -1,5 +1,5 @@
 import { navigate } from "gatsby";
-import * as React from "react";
+
 
 import { Button } from "../../components/Button/Button";
 import { ChevronRightIcon } from "../../components/icons/ChevronRight";

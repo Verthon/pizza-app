@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import * as React from "react";
+
 
 import { Pizzas } from "../api/types";
 import { Layout } from "../layouts/Layout/Layout";

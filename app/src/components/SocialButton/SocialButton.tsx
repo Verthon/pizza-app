@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { Styled } from "./SocialButton.styles"
 import { Props } from "./SocialButton.types"
 

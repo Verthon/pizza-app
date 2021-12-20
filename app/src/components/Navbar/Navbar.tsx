@@ -1,4 +1,3 @@
-import * as React from "react"
 
 import { useFirebase } from "../../hooks/useFirebase/useFirebase";
 import { useWindowSize } from "../../hooks/useWindowSize/useWindowSize"

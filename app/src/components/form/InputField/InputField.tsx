@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Controller } from "react-hook-form"
 
 import { Input } from "../Input/Input";

@@ -1,5 +1,3 @@
-import * as React from "react"
-
 import { ErrorMessage } from "../ErrorMessage/ErrorMessage"
 
 import { Styled } from "./Input.styles"
