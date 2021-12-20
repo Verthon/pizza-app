@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 
 import { Styled } from "./Label.styles"
 import { Props } from "./Label.types"

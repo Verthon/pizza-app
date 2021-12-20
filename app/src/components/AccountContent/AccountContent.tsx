@@ -1,5 +1,4 @@
 import { navigate } from "gatsby";
-import * as React from "react"
 
 import { ROUTES } from "../../constants/routes";
 import { useAppDispatch } from "../../hooks/useAppDispatch/useAppDispatch";

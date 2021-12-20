@@ -1,5 +1,6 @@
-import React from "react"
-import { Props, Size } from "./Heading.types"
+import * as React from "react"
+
+import { Props } from "./Heading.types"
 import { Styled } from "./Heading.styles"
 
 export const Heading = ({ level = 1, children, size = "md" }: Props) => {
