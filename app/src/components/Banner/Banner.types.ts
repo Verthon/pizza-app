@@ -1,4 +1,3 @@
-import React from "react"
 
 type Types = {
   default: "default"

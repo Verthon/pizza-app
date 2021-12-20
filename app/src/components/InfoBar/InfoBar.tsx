@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react"
 
 import { useAppState } from "../../hooks/useAppState/useAppState";
 import { useAppDispatch } from "../../hooks/useAppDispatch/useAppDispatch";

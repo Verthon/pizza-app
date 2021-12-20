@@ -1,4 +1,4 @@
-import * as React from "react";
+
 
 import { formatPrice } from "../../utils/numbers";
 import { Link } from "../Link/Link";

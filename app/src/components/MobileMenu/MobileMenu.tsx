@@ -1,4 +1,4 @@
-import * as React from "react";
+
 
 import { ChevronRightIcon } from "../icons/ChevronRight"
 import { Styled } from "./MobileMenu.styles"

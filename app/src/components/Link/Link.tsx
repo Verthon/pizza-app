@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { ROUTES } from '../../constants/routes';
 
 import { Styled } from "./Link.styled"

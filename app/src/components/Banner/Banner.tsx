@@ -1,5 +1,3 @@
-import React from "react"
-
 import { Styled } from "./Banner.styles"
 
 export const Banner = () => {

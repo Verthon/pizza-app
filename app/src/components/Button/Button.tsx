@@ -1,4 +1,3 @@
-import React from "react";
 import { theme } from "../../theme/theme";
 import { Spinner } from "../icons/Spinner";
 import { Styled } from "./Button.styles";
