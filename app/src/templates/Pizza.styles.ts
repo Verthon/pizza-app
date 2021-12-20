@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-import { ImageProps } from "../api/types";
+import type { ImageStyleProps } from "../components/PizzaItem/PizzaItem.types";
+
 
 type Size = {
   active: boolean;
@@ -11,7 +12,7 @@ const Title = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.xxl};
 `;
 
-const Image = styled(GatsbyImage)<ImageProps>`
+const Image = styled(GatsbyImage)<ImageStyleProps>`
   border-radius: ${({ theme }) => theme.border.defaultRadius};
 `;
 

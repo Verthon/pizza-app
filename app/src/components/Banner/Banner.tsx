@@ -1,9 +1,8 @@
 import React from "react"
 
 import { Styled } from "./Banner.styles"
-import { Props } from "./Banner.types"
 
-export const Banner = ({ type, open = false,  }: Props) => {
+export const Banner = () => {
   return <Styled.Container>
     
   </Styled.Container>

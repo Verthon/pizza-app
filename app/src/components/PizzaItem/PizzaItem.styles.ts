@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-import type { ImageProps } from "../../api/types";
+import type { ImageStyleProps } from "./PizzaItem.types";
 
 const Container = styled.div`
   padding: ${({ theme }) => theme.spacing.md} 0;
@@ -12,7 +12,7 @@ const Container = styled.div`
   }
 `;
 
-const Image = styled(GatsbyImage)<ImageProps>`
+const Image = styled(GatsbyImage)<ImageStyleProps>`
   border-radius: ${({ theme }) => theme.border.defaultRadius};
 `;
 

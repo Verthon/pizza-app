@@ -1,5 +1,9 @@
-import { PizzaNode } from "../../api/types";
+import { PizzaNode, ImageProps } from "../../api/types";
 
 export type Props = {
   pizza: PizzaNode
+}
+
+export type ImageStyleProps = {
+  image: ImageProps
 }

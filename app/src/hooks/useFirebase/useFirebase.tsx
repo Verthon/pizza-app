@@ -31,7 +31,7 @@ export const useFirebase = () => {
     return firebaseApp.auth().currentUser
   }
 
-  const updateUser = async (user: firebase.User | null) => {
+  const updateUser = async (user: any | null) => {
     return await firebaseApp.auth().updateCurrentUser(user)
   }
 
