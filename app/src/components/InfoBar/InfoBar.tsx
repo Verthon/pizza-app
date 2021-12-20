@@ -8,7 +8,7 @@ import { Props } from "./InfoBar.types";
 
 const DELAY = 6000
 
-export const InfoBar = ({ message, type = "default", duration = DELAY, text }: Props) => {
+export const InfoBar = ({ message, type = "default", duration = DELAY }: Props) => {
   const isActive = useAppState((state) => state.notifications.active);
   const dispatch = useAppDispatch();
   React.useEffect(() => {

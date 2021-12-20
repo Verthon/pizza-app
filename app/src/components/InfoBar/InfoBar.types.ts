@@ -4,7 +4,7 @@ export type Props = {
   message: string | null,
   type?: Type,
   duration?: number,
-  text: string
+  text?: string
 }
 
 export type SProps = Omit<Props, "message">

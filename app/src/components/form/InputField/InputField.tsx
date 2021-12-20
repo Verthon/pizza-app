@@ -14,7 +14,7 @@ export const InputField = ({ name, label, disabled, maxLength, placeholder, type
       <Controller
         name={name}
         control={control}
-        render={({ field: { onChange, value, name, ref },
+        render={({ field: { onChange, value, name },
           fieldState: { error } }) => <Input
             type={type}
             name={name}

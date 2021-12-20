@@ -1,14 +1,4 @@
-// const { compilerOptions } = require("./tsconfig.json");
-// const { pathsToModuleNameMapper } = require("ts-jest/utils");
-// const paths = pathsToModuleNameMapper(compilerOptions.paths, {
-//   prefix: "<rootDir>",
-// });
-
 module.exports = {
-  // transform: {
-  //   "^.+\\.tsx?$": "ts-jest",
-  //   "^.+\\.jsx?$": `<rootDir>/tests/jest-preprocess.js`,
-  // },
   transform: {
     "^.+\\.[jt]sx?$": "<rootDir>/tests/jest-preprocess.js",
   },
@@ -24,5 +14,15 @@ module.exports = {
   },
   testURL: `http://localhost`,
   setupFiles: [`<rootDir>/tests/loadershim.js`],
-  //setupFilesAfterEnv: ["<rootDir>/setup-test-env.js"],
+  "collectCoverageFrom": [
+    "src/**/*.{ts,tsx}",
+    "!src/theme/*",
+    "!src/store/*",
+    "!src/constants/*",
+    "!src/components/icons/*",
+    "!src/**/*.styles.ts",
+    "!src/**/*.types.ts",
+    "!src/providers/**/*"
+  ],
+  setupFilesAfterEnv: ["<rootDir>/setup-test-env.js"],
 };
