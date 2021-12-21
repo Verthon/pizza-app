@@ -1,5 +1,3 @@
-import { GatsbyImageProps } from "gatsby-image";
-
 export type PizzaNode = {
   id: string;
   name: string;
@@ -26,5 +24,6 @@ export type Pizzas = {
 };
 
 export type ImageProps = {
-  gatsbyImageData: any;
+  // any till there will be correct type from GatsbyPlugin
+  gatsbyImageData: any
 };
