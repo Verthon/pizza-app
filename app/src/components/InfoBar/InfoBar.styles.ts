@@ -10,7 +10,6 @@ const Container = styled.div<SProps>`
   }};
   color: ${(props) => {
     if(props.type === "error") {
-      //return props.theme.colors.danger900
       return props.theme.colors.white
     }
     return props.theme.colors.blueGrey700}

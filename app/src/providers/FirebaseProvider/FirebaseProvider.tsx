@@ -1,12 +1,12 @@
 
 import * as React from "react"
-import firebase from "firebase/app";
-import "firebase/auth";
+import { initializeApp } from "firebase/app"
+import { initializeAuth } from "firebase/auth";
 
-import { Props } from "./FirebaseProvider.types";
+import type { FirebaseModules, Props } from "./FirebaseProvider.types";
 
 export const FirebaseContext = React.createContext<
-  firebase.app.App | undefined
+FirebaseModules | undefined
 >(undefined);
 
 const firebaseConfig = {
@@ -19,11 +19,12 @@ const firebaseConfig = {
   measurementId: process.env.GATSBY_FIRESTORE_MESURMENT_ID,
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
+const auth = initializeAuth(firebaseApp);
 
 export const FirebaseProvider = ({ children }: Props) => {
   return (
-    <FirebaseContext.Provider value={firebaseApp}>
+    <FirebaseContext.Provider value={{app: firebaseApp, auth }}>
       {children}
     </FirebaseContext.Provider>
   );

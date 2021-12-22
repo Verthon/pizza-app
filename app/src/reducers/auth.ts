@@ -2,9 +2,9 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export type User = {
   uid: string,
-  email: string,
-  name: string,
-  avatar: string
+  email: string | null,
+  name: string | null,
+  avatar: string | null
 }
 
 type AuthState = {
@@ -25,13 +25,11 @@ type ActionType = {
   loading: boolean
 }
 
-type LoginPayload = User
-
 export const authSlice = createSlice({
   name: 'auth',
   initialState: initialState,
   reducers: {
-    login: (state: AuthState, action: PayloadAction<LoginPayload>) => {
+    login: (state: AuthState, action: PayloadAction<User>) => {
       state.synced = true
       state.user = action.payload
       state.loading = false
