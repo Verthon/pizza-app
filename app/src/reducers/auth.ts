@@ -1,17 +1,17 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 
 export type User = {
-  uid: string,
-  email: string | null,
-  name: string | null,
+  uid: string
+  email: string | null
+  name: string | null
   avatar: string | null
 }
 
 type AuthState = {
-  error: string | null,
-  loading: boolean,
-  synced: boolean,
-  user: null | any,
+  error: string | null
+  loading: boolean
+  synced: boolean
+  user: null | User
 }
 
 export const initialState: AuthState = {
@@ -26,7 +26,7 @@ type ActionType = {
 }
 
 export const authSlice = createSlice({
-  name: 'auth',
+  name: "auth",
   initialState: initialState,
   reducers: {
     login: (state: AuthState, action: PayloadAction<User>) => {
@@ -40,9 +40,9 @@ export const authSlice = createSlice({
       state.loading = false
     },
     setAuthLoading: (state: AuthState, action: PayloadAction<ActionType>) => {
-      state.loading = action.payload.loading;
-    }
-  }
+      state.loading = action.payload.loading
+    },
+  },
 })
 
 export const selectCurrentUser = (state: { auth: AuthState }) => state.auth.user

@@ -6,5 +6,5 @@ const Container = styled.nav`
 `
 
 export const Styled = {
-  Container
+  Container,
 }

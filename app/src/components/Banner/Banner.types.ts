@@ -1,4 +1,3 @@
-
 type Types = {
   default: "default"
   warning: "warning"

@@ -1,7 +1,6 @@
-
-import { PizzaItem } from "../PizzaItem/PizzaItem";
-import { Styled } from "./PizzaList.styles";
-import type { Props } from "./PizzaList.types";
+import { PizzaItem } from "../PizzaItem/PizzaItem"
+import { Styled } from "./PizzaList.styles"
+import type { Props } from "./PizzaList.types"
 
 export const PizzaList = ({ pizzas }: Props) => {
   return (
@@ -10,5 +9,5 @@ export const PizzaList = ({ pizzas }: Props) => {
         <PizzaItem key={pizza.id} pizza={pizza} />
       ))}
     </Styled.Container>
-  );
-};
+  )
+}

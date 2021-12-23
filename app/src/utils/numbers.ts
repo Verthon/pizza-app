@@ -13,5 +13,5 @@ const sizes = {
 }
 
 export const calculatePizzaPrice = (cents: number, size: keyof typeof sizes) => {
-  return cents * sizes[size];
+  return cents * sizes[size]
 }

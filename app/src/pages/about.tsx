@@ -1,6 +1,5 @@
-
-import { Layout } from "../layouts/Layout/Layout";
-import { AppProviders } from "../providers/AppProviders/AppProviders";
+import { Layout } from "../layouts/Layout/Layout"
+import { AppProviders } from "../providers/AppProviders/AppProviders"
 
 function AboutPage() {
   return (
@@ -9,7 +8,7 @@ function AboutPage() {
         <p>About page</p>
       </Layout>
     </AppProviders>
-  );
+  )
 }
 
-export default AboutPage;
+export default AboutPage

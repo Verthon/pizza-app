@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { GatsbyImage } from "gatsby-plugin-image";
+import styled from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-import type { ImageStyleProps } from "./PizzaItem.types";
+import type { ImageStyleProps } from "./PizzaItem.types"
 
 const Container = styled.div`
   padding: ${({ theme }) => theme.spacing.md} 0;
@@ -10,11 +10,11 @@ const Container = styled.div`
   a {
     color: ${({ theme }) => theme.colors.blueGrey900};
   }
-`;
+`
 
 const Image = styled(GatsbyImage)<ImageStyleProps>`
   border-radius: ${({ theme }) => theme.border.defaultRadius};
-`;
+`
 
 const Footer = styled.footer`
   display: flex;
@@ -26,10 +26,10 @@ const Footer = styled.footer`
   span {
     font-size: 1rem;
   }
-`;
+`
 
 export const Styled = {
   Container,
   Image,
   Footer,
-};
+}

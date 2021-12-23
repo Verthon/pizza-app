@@ -1,5 +1,5 @@
-import { FieldError } from "react-hook-form";
+import { FieldError } from "react-hook-form"
 
 export type Props = {
-  error?: FieldError;
+  error?: FieldError
 }

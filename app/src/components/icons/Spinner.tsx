@@ -1,9 +1,8 @@
+import styled from "styled-components"
 
-import styled from "styled-components";
+import { theme } from "../../theme/theme"
 
-import { theme } from "../../theme/theme";
-
-import { Props } from "./Types";
+import { Props } from "./Types"
 
 const Container = styled.div<Props>`
   @keyframes lds-ring {
@@ -42,13 +41,9 @@ const Container = styled.div<Props>`
   &div:nth-child(3) {
     animation-delay: -0.15s;
   }
-`;
+`
 
-export const Spinner = ({
-  width = 80,
-  height = 80,
-  color = theme.colors.iconColor,
-}: Props) => {
+export const Spinner = ({ width = 80, height = 80, color = theme.colors.iconColor }: Props) => {
   return (
     <Container width={width} height={height} color={color}>
       <div></div>
@@ -56,5 +51,5 @@ export const Spinner = ({
       <div></div>
       <div></div>
     </Container>
-  );
-};
+  )
+}

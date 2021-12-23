@@ -1,6 +1,6 @@
 export enum Provider {
   facebook = "facebook",
-  google = "google"
+  google = "google",
 }
 
 export type Props = {
