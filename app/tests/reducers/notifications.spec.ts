@@ -3,28 +3,28 @@ import notificationSlice, {
   set,
   hide,
   initialState,
-} from "../../src/reducers/notifications";
+} from "../../src/reducers/notifications"
 
 describe("notificationsSlice", () => {
   it("should return default state", () => {
-    expect(notificationSlice.reducer(undefined, { type: "" })).toEqual(
+    expect(notificationSlice.reducer(undefined, {type: ""})).toEqual(
       initialState
-    );
-  });
+    )
+  })
 
   it("should add new error type notification", () => {
     expect(
       notificationSlice.reducer(
         initialState,
-        show({ message: "Something went wrong", type: "error" })
+        show({message: "Something went wrong", type: "error"})
       )
     ).toEqual({
       ...initialState,
       message: "Something went wrong",
       type: "error",
       active: true,
-    });
-  });
+    })
+  })
 
   it("should hide the current notification", () => {
     const stateWithActiveNotification = {
@@ -32,13 +32,13 @@ describe("notificationsSlice", () => {
       message: "Something went wrong",
       type: "error",
       active: true,
-    };
+    }
     expect(
       notificationSlice.reducer(
         initialState,
-        show({ message: "Something went wrong", type: "error" })
+        show({message: "Something went wrong", type: "error"})
       )
-    ).toEqual(stateWithActiveNotification);
+    ).toEqual(stateWithActiveNotification)
 
     expect(
       notificationSlice.reducer(
@@ -50,8 +50,8 @@ describe("notificationsSlice", () => {
         },
         hide()
       )
-    ).toEqual(initialState);
-  });
+    ).toEqual(initialState)
+  })
 
   it("should always return intial state for hide action", () => {
     expect(
@@ -64,8 +64,8 @@ describe("notificationsSlice", () => {
         },
         hide()
       )
-    ).toEqual(initialState);
-  });
+    ).toEqual(initialState)
+  })
 
   it("should set the current notification", () => {
     expect(
@@ -76,13 +76,13 @@ describe("notificationsSlice", () => {
           type: "error",
           active: true,
         },
-        set({ type: "info", message: "The email will be sent" })
+        set({type: "info", message: "The email will be sent"})
       )
     ).toEqual({
       ...initialState,
       active: false,
       type: "info",
       message: "The email will be sent",
-    });
-  });
-});
+    })
+  })
+})

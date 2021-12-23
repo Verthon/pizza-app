@@ -1,11 +1,9 @@
+import {formatPrice} from "../../utils/numbers"
+import {Link} from "../Link/Link"
+import {Styled} from "./PizzaItem.styles"
+import type {Props} from "./PizzaItem.types"
 
-
-import { formatPrice } from "../../utils/numbers";
-import { Link } from "../Link/Link";
-import { Styled } from "./PizzaItem.styles";
-import type { Props } from "./PizzaItem.types";
-
-export function PizzaItem({ pizza }: Props) {
+export function PizzaItem({pizza}: Props) {
   return (
     <Styled.Container>
       <Link route={`/pizza/${pizza.slug.current}`}>
@@ -16,5 +14,5 @@ export function PizzaItem({ pizza }: Props) {
         </Styled.Footer>
       </Link>
     </Styled.Container>
-  );
+  )
 }

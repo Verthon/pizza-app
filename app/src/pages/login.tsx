@@ -1,14 +1,12 @@
-
-
-import { LoginForm } from "../components/forms/LoginForm/LoginForm";
-import { Heading } from "../components/Heading/Heading";
-import { Layout } from "../layouts/Layout/Layout";
-import { Link } from "../components/Link/Link";
-import { SocialButton } from "../components/SocialButton/SocialButton";
-import { Provider } from "../components/SocialButton/SocialButton.types";
-import { Text } from "../components/Text/Text";
-import { ROUTES } from "../constants/routes";
-import { AppProviders } from "../providers/AppProviders/AppProviders";
+import {LoginForm} from "../components/forms/LoginForm/LoginForm"
+import {Heading} from "../components/Heading/Heading"
+import {Layout} from "../layouts/Layout/Layout"
+import {Link} from "../components/Link/Link"
+import {SocialButton} from "../components/SocialButton/SocialButton"
+import {Provider} from "../components/SocialButton/SocialButton.types"
+import {Text} from "../components/Text/Text"
+import {ROUTES} from "../constants/routes"
+import {AppProviders} from "../providers/AppProviders/AppProviders"
 
 function LoginPage() {
   return (
@@ -27,7 +25,7 @@ function LoginPage() {
         </Text>
       </Layout>
     </AppProviders>
-  );
+  )
 }
 
-export default LoginPage;
+export default LoginPage

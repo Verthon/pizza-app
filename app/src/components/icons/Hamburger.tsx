@@ -1,7 +1,5 @@
-
-
-import { theme } from "../../theme/theme";
-import { Props } from "./Types";
+import {theme} from "../../theme/theme"
+import {Props} from "./Types"
 
 export const HamburgerIcon = ({
   width = 24,
@@ -24,5 +22,5 @@ export const HamburgerIcon = ({
         d="M4 6h16M4 12h8m-8 6h16"
       />
     </svg>
-  );
-};
+  )
+}

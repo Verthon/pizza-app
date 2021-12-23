@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const Container = styled.div`
   font-size: ${({theme}) => theme.fontSizes.sm};
@@ -7,5 +7,5 @@ const Container = styled.div`
 `
 
 export const Styled = {
-  Container
+  Container,
 }

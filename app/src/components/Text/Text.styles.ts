@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { SProps } from "./Text.types"
+import {SProps} from "./Text.types"
 
 const Text = styled.p<SProps>`
   font-size: ${({theme}) => theme.fontSizes.md};
@@ -7,5 +7,5 @@ const Text = styled.p<SProps>`
 `
 
 export const Styled = {
-  Text
+  Text,
 }

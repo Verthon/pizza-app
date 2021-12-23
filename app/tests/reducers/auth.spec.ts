@@ -3,12 +3,12 @@ import authSlice, {
   logout,
   setAuthLoading,
   initialState,
-} from "../../src/reducers/auth";
+} from "../../src/reducers/auth"
 
 describe("authSlice", () => {
   it("should return default state", () => {
-    expect(authSlice.reducer(undefined, { type: "" })).toEqual(initialState);
-  });
+    expect(authSlice.reducer(undefined, {type: ""})).toEqual(initialState)
+  })
 
   it("should return updated state after login", () => {
     expect(
@@ -30,8 +30,8 @@ describe("authSlice", () => {
         name: "Mariusz",
         uid: "12",
       },
-    });
-  });
+    })
+  })
 
   it("should return updated state after logout", () => {
     const loggedState = {
@@ -43,12 +43,16 @@ describe("authSlice", () => {
         name: "Mariusz",
         uid: "12",
       },
-    };
-    expect(authSlice.reducer(loggedState, logout())).toEqual(initialState);
-  });
+    }
+    expect(authSlice.reducer(loggedState, logout())).toEqual(initialState)
+  })
 
   it("should set the loading status", () => {
-    expect(authSlice.reducer(initialState, setAuthLoading({ loading: true }))).toEqual({ ...initialState, loading: true });
-    expect(authSlice.reducer(initialState, setAuthLoading({ loading: false }))).toEqual({ ...initialState, loading: false });
+    expect(
+      authSlice.reducer(initialState, setAuthLoading({loading: true}))
+    ).toEqual({...initialState, loading: true})
+    expect(
+      authSlice.reducer(initialState, setAuthLoading({loading: false}))
+    ).toEqual({...initialState, loading: false})
   })
-});
+})

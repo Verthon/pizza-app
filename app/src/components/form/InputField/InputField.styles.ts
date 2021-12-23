@@ -7,5 +7,5 @@ const InputField = styled.div`
 `
 
 export const Styled = {
-  InputField
+  InputField,
 }

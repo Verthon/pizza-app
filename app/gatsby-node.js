@@ -1,8 +1,8 @@
-const path = require('path');
+const path = require("path")
 
-async function generateDetailPages({ graphql, actions }) {
-  const template = path.resolve("./src/templates/Pizza.tsx");
-  const { data } = await graphql(`
+async function generateDetailPages({graphql, actions}) {
+  const template = path.resolve("./src/templates/Pizza.tsx")
+  const {data} = await graphql(`
     query {
       pizzas: allSanityPizza {
         nodes {
@@ -19,10 +19,10 @@ async function generateDetailPages({ graphql, actions }) {
       path: `pizza/${pizza.slug.current}`,
       component: template,
       context: {
-        slug: pizza.slug.current
-      }
+        slug: pizza.slug.current,
+      },
     })
-  });
+  })
 }
 
 async function createPages(params) {
@@ -30,5 +30,5 @@ async function createPages(params) {
 }
 
 module.exports = {
-  createPages
+  createPages,
 }

@@ -15,14 +15,14 @@ const Navbar = styled.nav`
     cursor: pointer;
 
     svg {
-      stroke: ${({ theme }) => theme.colors.blueGrey700};
+      stroke: ${({theme}) => theme.colors.blueGrey700};
       width: 22px;
     }
   }
 
   p {
-    font-size: ${({ theme }) => theme.fontSizes.sm};
-    color: ${({ theme }) => theme.colors.blueGrey700};
+    font-size: ${({theme}) => theme.fontSizes.sm};
+    color: ${({theme}) => theme.colors.blueGrey700};
   }
 `
 
@@ -37,5 +37,5 @@ const Footer = styled.footer`
 export const Styled = {
   Container,
   Navbar,
-  Footer
+  Footer,
 }

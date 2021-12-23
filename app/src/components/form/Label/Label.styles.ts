@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { SProps } from "./Label.types"
+import {SProps} from "./Label.types"
 
 const Label = styled.label<SProps>`
   font-size: ${({theme}) => theme.fontSizes.sm};
@@ -7,5 +7,5 @@ const Label = styled.label<SProps>`
 `
 
 export const Styled = {
-  Label
+  Label,
 }

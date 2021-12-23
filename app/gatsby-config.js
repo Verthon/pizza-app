@@ -1,6 +1,6 @@
-require('dotenv').config({ path: "./env.local" })
+require("dotenv").config({path: "./env.local"})
 
-console.log( process.env.SANITY_TOKEN,  process.env);
+console.log(process.env.SANITY_TOKEN, process.env)
 
 module.exports = {
   siteMetadata: {
@@ -39,6 +39,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
-    "gatsby-plugin-image"
+    "gatsby-plugin-image",
   ],
-};
+}

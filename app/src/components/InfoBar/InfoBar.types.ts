@@ -1,9 +1,9 @@
 type Type = "success" | "warning" | "info" | "error" | "default"
 
 export type Props = {
-  message: string | null,
-  type?: Type,
-  duration?: number,
+  message: string | null
+  type?: Type
+  duration?: number
   text?: string
 }
 

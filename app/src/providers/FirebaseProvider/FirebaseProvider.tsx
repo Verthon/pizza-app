@@ -1,13 +1,12 @@
-
 import * as React from "react"
-import { initializeApp } from "firebase/app"
-import { initializeAuth } from "firebase/auth";
+import {initializeApp} from "firebase/app"
+import {initializeAuth} from "firebase/auth"
 
-import type { FirebaseModules, Props } from "./FirebaseProvider.types";
+import type {FirebaseModules, Props} from "./FirebaseProvider.types"
 
-export const FirebaseContext = React.createContext<
-FirebaseModules | undefined
->(undefined);
+export const FirebaseContext = React.createContext<FirebaseModules | undefined>(
+  undefined
+)
 
 const firebaseConfig = {
   apiKey: process.env.GATSBY_FIRESTORE_API_KEY,
@@ -17,15 +16,15 @@ const firebaseConfig = {
   messagingSenderId: process.env.GATSBY_FIRESTORE_MESSAGING_SENDER_ID,
   appId: process.env.GATSBY_FIRESTORE_APP_ID,
   measurementId: process.env.GATSBY_FIRESTORE_MESURMENT_ID,
-};
+}
 
-const firebaseApp = initializeApp(firebaseConfig);
-const auth = initializeAuth(firebaseApp);
+const firebaseApp = initializeApp(firebaseConfig)
+const auth = initializeAuth(firebaseApp)
 
-export const FirebaseProvider = ({ children }: Props) => {
+export const FirebaseProvider = ({children}: Props) => {
   return (
-    <FirebaseContext.Provider value={{app: firebaseApp, auth }}>
+    <FirebaseContext.Provider value={{app: firebaseApp, auth}}>
       {children}
     </FirebaseContext.Provider>
-  );
-};
+  )
+}

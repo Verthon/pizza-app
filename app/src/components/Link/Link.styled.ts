@@ -1,4 +1,4 @@
-import { Link as GLink } from "gatsby"
+import {Link as GLink} from "gatsby"
 import styled from "styled-components"
 
 const Link = styled(GLink)`
@@ -11,5 +11,5 @@ const Anchor = styled.a`
 
 export const Styled = {
   Link,
-  Anchor
+  Anchor,
 }

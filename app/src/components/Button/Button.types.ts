@@ -1,11 +1,11 @@
-import { HEIGHT } from "./Button";
+import {HEIGHT} from "./Button"
 
 export enum Variant {
   primary = "primary",
   secondary = "secondary",
 }
 
-type Size = keyof typeof HEIGHT;
+type Size = keyof typeof HEIGHT
 
 export type Props = {
   variant?: Variant

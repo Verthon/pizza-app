@@ -12,6 +12,9 @@ const sizes = {
   L: 1.5,
 }
 
-export const calculatePizzaPrice = (cents: number, size: keyof typeof sizes) => {
-  return cents * sizes[size];
+export const calculatePizzaPrice = (
+  cents: number,
+  size: keyof typeof sizes
+) => {
+  return cents * sizes[size]
 }

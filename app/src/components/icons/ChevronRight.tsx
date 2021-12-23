@@ -1,7 +1,5 @@
-
-
-import { theme } from "../../theme/theme";
-import { Props } from "./Types";
+import {theme} from "../../theme/theme"
+import {Props} from "./Types"
 
 export const ChevronRightIcon = ({
   width = 24,
@@ -24,5 +22,5 @@ export const ChevronRightIcon = ({
         d="M15 19l-7-7 7-7"
       />
     </svg>
-  );
-};
+  )
+}

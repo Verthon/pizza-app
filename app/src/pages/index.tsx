@@ -1,14 +1,13 @@
+import {graphql} from "gatsby"
 
-import { graphql } from "gatsby";
+import {Layout} from "../layouts/Layout/Layout"
+import {InfoBar} from "../components/InfoBar/InfoBar"
+import {Coupon} from "../components/Coupon/Coupon"
+import {PizzaList} from "../components/PizzaList/PizzaList"
+import {Pizzas} from "../api/types"
+import {AppProviders} from "../providers/AppProviders/AppProviders"
 
-import { Layout } from "../layouts/Layout/Layout";
-import { InfoBar } from "../components/InfoBar/InfoBar";
-import { Coupon } from "../components/Coupon/Coupon";
-import { PizzaList } from "../components/PizzaList/PizzaList";
-import { Pizzas } from "../api/types";
-import { AppProviders } from "../providers/AppProviders/AppProviders";
-
-function IndexPage({ data }: { data: Pizzas }) {
+function IndexPage({data}: {data: Pizzas}) {
   return (
     <AppProviders>
       <Layout>
@@ -19,12 +18,12 @@ function IndexPage({ data }: { data: Pizzas }) {
         <PizzaList pizzas={data.pizzas.nodes} />
       </Layout>
     </AppProviders>
-  );
+  )
 }
 
 export const query = graphql`
   query getTopPizzas {
-    pizzas: allSanityPizza(filter: { hot: { eq: true } }) {
+    pizzas: allSanityPizza(filter: {hot: {eq: true}}) {
       nodes {
         name
         id
@@ -45,6 +44,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default IndexPage;
+export default IndexPage

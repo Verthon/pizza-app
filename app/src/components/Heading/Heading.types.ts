@@ -1,5 +1,4 @@
-
-import { ITheme } from "../../theme/theme"
+import {ITheme} from "../../theme/theme"
 
 export enum Size {
   xs = "1rem",
@@ -14,8 +13,8 @@ export type Sizes = keyof ITheme["headerFontSizes"]
 
 export type Props = {
   children: React.ReactNode
-  level: number;
-  size?: Sizes;
+  level: number
+  size?: Sizes
 }
 
 export type SProps = {

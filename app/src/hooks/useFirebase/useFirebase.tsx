@@ -1,27 +1,45 @@
 import * as React from "react"
-import { useDispatch, useSelector } from 'react-redux'
-import { onAuthStateChanged, updateCurrentUser, User, signOut, signInWithEmailAndPassword } from "firebase/auth";
+import {useDispatch, useSelector} from "react-redux"
+import {
+  onAuthStateChanged,
+  updateCurrentUser,
+  User,
+  signOut,
+  signInWithEmailAndPassword,
+} from "firebase/auth"
 
-import { FirebaseContext } from "../../providers/FirebaseProvider/FirebaseProvider";
-import { login, logout as logoutAction, selectCurrentUser, setAuthLoading } from "../../reducers/auth";
+import {FirebaseContext} from "../../providers/FirebaseProvider/FirebaseProvider"
+import {
+  login,
+  logout as logoutAction,
+  selectCurrentUser,
+  setAuthLoading,
+} from "../../reducers/auth"
 
 export const useFirebase = () => {
-  const firebaseApp = React.useContext(FirebaseContext);
+  const firebaseApp = React.useContext(FirebaseContext)
 
   if (firebaseApp === undefined) {
-    throw new Error('Missing firebase')
+    throw new Error("Missing firebase")
   }
 
-  const { auth } = firebaseApp;
+  const {auth} = firebaseApp
 
   const dispatch = useDispatch()
   const currentUser = useSelector(selectCurrentUser)
 
   React.useEffect(() => {
     const setUser = (user: User | null) => {
-      dispatch(setAuthLoading({ loading: true }));
+      dispatch(setAuthLoading({loading: true}))
       if (user) {
-        dispatch(login({ uid: user.uid, email: user.email, name: user.displayName, avatar: user.photoURL }))
+        dispatch(
+          login({
+            uid: user.uid,
+            email: user.email,
+            name: user.displayName,
+            avatar: user.photoURL,
+          })
+        )
       } else {
         dispatch(logoutAction())
       }
@@ -52,6 +70,6 @@ export const useFirebase = () => {
     updateUser: () => updateUser,
     logout: () => logout(),
     login: (email: string, password: string) => loginWithEmail(email, password),
-    currentUser
+    currentUser,
   }
 }

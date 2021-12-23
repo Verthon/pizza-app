@@ -7,5 +7,5 @@ const Form = styled.form`
 `
 
 export const Styled = {
-  Form
+  Form,
 }

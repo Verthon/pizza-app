@@ -14,7 +14,7 @@ module.exports = {
   },
   testURL: `http://localhost`,
   setupFiles: [`<rootDir>/tests/loadershim.js`],
-  "collectCoverageFrom": [
+  collectCoverageFrom: [
     "src/**/*.{ts,tsx}",
     "!src/theme/*",
     "!src/store/*",
@@ -22,7 +22,7 @@ module.exports = {
     "!src/components/icons/*",
     "!src/**/*.styles.ts",
     "!src/**/*.types.ts",
-    "!src/providers/**/*"
+    "!src/providers/**/*",
   ],
   setupFilesAfterEnv: ["<rootDir>/setup-test-env.js"],
-};
+}
