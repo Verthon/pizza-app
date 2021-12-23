@@ -1,4 +1,4 @@
-import {ITheme} from "../../theme/theme"
+import { ITheme } from "../../theme/theme"
 
 export enum Size {
   xs = "1rem",

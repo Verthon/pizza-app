@@ -25,5 +25,6 @@ export type Pizzas = {
 
 export type ImageProps = {
   // any till there will be correct type from GatsbyPlugin
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   gatsbyImageData: any
 }

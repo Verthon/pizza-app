@@ -1,27 +1,19 @@
-import {Controller} from "react-hook-form"
+import { Controller } from "react-hook-form"
 
-import {Input} from "../Input/Input"
-import {Label} from "../Label/Label"
+import { Input } from "../Input/Input"
+import { Label } from "../Label/Label"
 
-import {Styled} from "./InputField.styles"
-import {Props} from "./InputField.types"
+import { Styled } from "./InputField.styles"
+import { Props } from "./InputField.types"
 
-export const InputField = ({
-  name,
-  label,
-  disabled,
-  maxLength,
-  placeholder,
-  type,
-  control,
-}: Props) => {
+export const InputField = ({ name, label, disabled, maxLength, placeholder, type, control }: Props) => {
   return (
     <Styled.InputField>
       <Label name={name}>{label}</Label>
       <Controller
         name={name}
         control={control}
-        render={({field: {onChange, value, name}, fieldState: {error}}) => (
+        render={({ field: { onChange, value, name }, fieldState: { error } }) => (
           <Input
             type={type}
             name={name}

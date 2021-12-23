@@ -1,12 +1,8 @@
-import {theme} from "../../theme/theme"
+import { theme } from "../../theme/theme"
 
-import {Props} from "./Types"
+import { Props } from "./Types"
 
-export function CartIcon({
-  width = 24,
-  height = 24,
-  color = theme.colors.iconColor,
-}: Props) {
+export function CartIcon({ width = 24, height = 24, color = theme.colors.iconColor }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

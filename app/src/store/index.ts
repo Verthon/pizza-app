@@ -1,4 +1,4 @@
-import {combineReducers, configureStore} from "@reduxjs/toolkit"
+import { combineReducers, configureStore } from "@reduxjs/toolkit"
 
 import authSlice from "../reducers/auth"
 import notificationsSlice from "../reducers/notifications"

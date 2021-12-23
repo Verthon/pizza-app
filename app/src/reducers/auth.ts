@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit"
+import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 
 export type User = {
   uid: string
@@ -11,7 +11,7 @@ type AuthState = {
   error: string | null
   loading: boolean
   synced: boolean
-  user: null | any
+  user: null | User
 }
 
 export const initialState: AuthState = {
@@ -45,8 +45,8 @@ export const authSlice = createSlice({
   },
 })
 
-export const selectCurrentUser = (state: {auth: AuthState}) => state.auth.user
+export const selectCurrentUser = (state: { auth: AuthState }) => state.auth.user
 
-export const {login, logout, setAuthLoading} = authSlice.actions
+export const { login, logout, setAuthLoading } = authSlice.actions
 
 export default authSlice

@@ -1,9 +1,9 @@
-import {ROUTES} from "../../constants/routes"
+import { ROUTES } from "../../constants/routes"
 
-import {Styled} from "./Link.styled"
-import {Props} from "./Link.types"
+import { Styled } from "./Link.styled"
+import { Props } from "./Link.types"
 
-export const Link = ({children, href, route}: Props) => {
+export const Link = ({ children, href, route }: Props) => {
   if (href) {
     return <Styled.Anchor href={href}>{children}</Styled.Anchor>
   }

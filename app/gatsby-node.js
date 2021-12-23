@@ -1,8 +1,8 @@
 const path = require("path")
 
-async function generateDetailPages({graphql, actions}) {
+async function generateDetailPages({ graphql, actions }) {
   const template = path.resolve("./src/templates/Pizza.tsx")
-  const {data} = await graphql(`
+  const { data } = await graphql(`
     query {
       pizzas: allSanityPizza {
         nodes {

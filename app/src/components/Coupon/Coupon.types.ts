@@ -1,4 +1,4 @@
-import {Margin} from "../../shared/types/Styles.types"
+import { Margin } from "../../shared/types/Styles.types"
 
 export type Props = {
   discount: number

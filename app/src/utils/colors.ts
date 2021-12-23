@@ -1,4 +1,4 @@
-import {theme} from "../theme/theme"
+import { theme } from "../theme/theme"
 
 export const getIconColor = (route: string) => {
   if (typeof window !== `undefined` && route === window?.location?.pathname) {

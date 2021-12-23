@@ -1,16 +1,17 @@
-import {navigate} from "gatsby"
+import { navigate } from "gatsby"
+import { FirebaseError } from "firebase/app"
 
-import {ROUTES} from "../../constants/routes"
-import {useAppDispatch} from "../../hooks/useAppDispatch/useAppDispatch"
-import {useAppState} from "../../hooks/useAppState/useAppState"
-import {useFirebase} from "../../hooks/useFirebase/useFirebase"
-import {set} from "../../reducers/notifications"
-import {Button} from "../Button/Button"
+import { ROUTES } from "../../constants/routes"
+import { useAppDispatch } from "../../hooks/useAppDispatch/useAppDispatch"
+import { useAppState } from "../../hooks/useAppState/useAppState"
+import { useFirebase } from "../../hooks/useFirebase/useFirebase"
+import { set } from "../../reducers/notifications"
+import { Button } from "../Button/Button"
 
 export const AccountContent = () => {
   const isLoggedIn = useAppState((state) => state.auth.user)
   const isLoading = useAppState((state) => state.auth.loading)
-  const {logout} = useFirebase()
+  const { logout } = useFirebase()
   const dispatch = useAppDispatch()
 
   const onUnAuthorized = () => {
@@ -28,7 +29,9 @@ export const AccountContent = () => {
       await logout()
       onSuccess()
     } catch (err) {
-      dispatch(set({message: err?.message, type: "error"}))
+      if (err instanceof FirebaseError) {
+        dispatch(set({ message: err.message, type: "error" }))
+      }
     }
   }
 

@@ -1,24 +1,12 @@
-import notificationSlice, {
-  show,
-  set,
-  hide,
-  initialState,
-} from "../../src/reducers/notifications"
+import notificationSlice, { show, set, hide, initialState } from "../../src/reducers/notifications"
 
 describe("notificationsSlice", () => {
   it("should return default state", () => {
-    expect(notificationSlice.reducer(undefined, {type: ""})).toEqual(
-      initialState
-    )
+    expect(notificationSlice.reducer(undefined, { type: "" })).toEqual(initialState)
   })
 
   it("should add new error type notification", () => {
-    expect(
-      notificationSlice.reducer(
-        initialState,
-        show({message: "Something went wrong", type: "error"})
-      )
-    ).toEqual({
+    expect(notificationSlice.reducer(initialState, show({ message: "Something went wrong", type: "error" }))).toEqual({
       ...initialState,
       message: "Something went wrong",
       type: "error",
@@ -33,12 +21,9 @@ describe("notificationsSlice", () => {
       type: "error",
       active: true,
     }
-    expect(
-      notificationSlice.reducer(
-        initialState,
-        show({message: "Something went wrong", type: "error"})
-      )
-    ).toEqual(stateWithActiveNotification)
+    expect(notificationSlice.reducer(initialState, show({ message: "Something went wrong", type: "error" }))).toEqual(
+      stateWithActiveNotification
+    )
 
     expect(
       notificationSlice.reducer(
@@ -76,7 +61,7 @@ describe("notificationsSlice", () => {
           type: "error",
           active: true,
         },
-        set({type: "info", message: "The email will be sent"})
+        set({ type: "info", message: "The email will be sent" })
       )
     ).toEqual({
       ...initialState,

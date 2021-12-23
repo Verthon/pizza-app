@@ -1,9 +1,9 @@
-import {theme} from "../../theme/theme"
-import {GiftIcon} from "../icons/Gift"
-import {Styled} from "./Coupon.styles"
-import {Props} from "./Coupon.types"
+import { theme } from "../../theme/theme"
+import { GiftIcon } from "../icons/Gift"
+import { Styled } from "./Coupon.styles"
+import { Props } from "./Coupon.types"
 
-export const Coupon = ({discount, text}: Props) => {
+export const Coupon = ({ discount, text }: Props) => {
   return (
     <Styled.Container>
       <GiftIcon width={40} height={40} color={theme.colors.primary700} />

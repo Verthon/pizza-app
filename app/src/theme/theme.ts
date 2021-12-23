@@ -23,8 +23,7 @@ const border = {
 }
 
 export const mediaQueries = (key: keyof typeof breakpoints) => {
-  return (style: TemplateStringsArray | String) =>
-    `@media (min-width: ${breakpoints[key]}em) { ${style} }`
+  return (style: TemplateStringsArray | string) => `@media (min-width: ${breakpoints[key]}em) { ${style} }`
 }
 
 const shadow = {
@@ -134,7 +133,7 @@ const spacing = {
 }
 
 const fontFamily = {
-  main: "-apple-system, BlinkMacSystemFont, 'Signika', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;",
+  main: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;",
 }
 
 export const theme: ITheme = Object.freeze({
