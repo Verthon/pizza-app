@@ -1,7 +1,7 @@
-import {Heading} from "../components/Heading/Heading"
-import {Layout} from "../layouts/Layout/Layout"
-import {Text} from "../components/Text/Text"
-import {AppProviders} from "../providers/AppProviders/AppProviders"
+import { Heading } from "../components/Heading/Heading"
+import { Layout } from "../layouts/Layout/Layout"
+import { Text } from "../components/Text/Text"
+import { AppProviders } from "../providers/AppProviders/AppProviders"
 
 function RegisterPage() {
   return (

@@ -1,4 +1,4 @@
-import {HEIGHT} from "./Button"
+import { HEIGHT } from "./Button"
 
 export enum Variant {
   primary = "primary",

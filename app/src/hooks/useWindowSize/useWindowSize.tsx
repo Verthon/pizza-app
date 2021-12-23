@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import {State} from "./useWindowSize.types"
+import { State } from "./useWindowSize.types"
 
 export const useWindowSize = () => {
   const [windowSize, setWindowSize] = React.useState<State>({

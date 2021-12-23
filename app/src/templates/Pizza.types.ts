@@ -1,4 +1,4 @@
-import {ImageProps, Topping} from "../api/types"
+import { ImageProps, Topping } from "../api/types"
 
 export type Props = {
   data: {

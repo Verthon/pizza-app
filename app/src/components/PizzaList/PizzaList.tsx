@@ -1,8 +1,8 @@
-import {PizzaItem} from "../PizzaItem/PizzaItem"
-import {Styled} from "./PizzaList.styles"
-import type {Props} from "./PizzaList.types"
+import { PizzaItem } from "../PizzaItem/PizzaItem"
+import { Styled } from "./PizzaList.styles"
+import type { Props } from "./PizzaList.types"
 
-export const PizzaList = ({pizzas}: Props) => {
+export const PizzaList = ({ pizzas }: Props) => {
   return (
     <Styled.Container>
       {pizzas.map((pizza) => (

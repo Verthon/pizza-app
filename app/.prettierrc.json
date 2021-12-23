@@ -2,6 +2,10 @@
   "trailingComma": "es5",
   "semi": false,
   "singleQuote": false,
-  "bracketSpacing": false,
-  "printWidth": 80
+  "bracketSpacing": true,
+  "printWidth": 120,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "proseWrap": "always",
+  "quoteProps": "as-needed"
 }

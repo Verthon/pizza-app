@@ -1,13 +1,8 @@
-import authSlice, {
-  login,
-  logout,
-  setAuthLoading,
-  initialState,
-} from "../../src/reducers/auth"
+import authSlice, { login, logout, setAuthLoading, initialState } from "../../src/reducers/auth"
 
 describe("authSlice", () => {
   it("should return default state", () => {
-    expect(authSlice.reducer(undefined, {type: ""})).toEqual(initialState)
+    expect(authSlice.reducer(undefined, { type: "" })).toEqual(initialState)
   })
 
   it("should return updated state after login", () => {
@@ -48,11 +43,13 @@ describe("authSlice", () => {
   })
 
   it("should set the loading status", () => {
-    expect(
-      authSlice.reducer(initialState, setAuthLoading({loading: true}))
-    ).toEqual({...initialState, loading: true})
-    expect(
-      authSlice.reducer(initialState, setAuthLoading({loading: false}))
-    ).toEqual({...initialState, loading: false})
+    expect(authSlice.reducer(initialState, setAuthLoading({ loading: true }))).toEqual({
+      ...initialState,
+      loading: true,
+    })
+    expect(authSlice.reducer(initialState, setAuthLoading({ loading: false }))).toEqual({
+      ...initialState,
+      loading: false,
+    })
   })
 })

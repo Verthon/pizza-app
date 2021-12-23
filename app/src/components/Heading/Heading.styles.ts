@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import {SProps} from "./Heading.types"
+import { SProps } from "./Heading.types"
 
 const Header = styled.h1<SProps>`
   text-align: center;

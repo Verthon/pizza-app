@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {SProps, Variant} from "./Button.types"
+import { SProps, Variant } from "./Button.types"
 
 const Button = styled.button<SProps>`
   background-color: ${(props) => {
@@ -7,13 +7,13 @@ const Button = styled.button<SProps>`
       return props.theme.colors.primary
     }
   }};
-  border-radius: ${({theme}) => theme.border.defaultRadius};
+  border-radius: ${({ theme }) => theme.border.defaultRadius};
   border: 0;
-  color: ${({theme}) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
   height: ${(props) => props.height}px;
   font-weight: 600;
   &:disabled {
-    background-color: ${({theme}) => theme.colors.grey400};
+    background-color: ${({ theme }) => theme.colors.grey400};
   }
   cursor: pointer;
 `

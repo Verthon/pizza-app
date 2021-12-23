@@ -1,4 +1,4 @@
-import {formatPrice, calculatePizzaPrice} from "../../src/utils/numbers"
+import { formatPrice, calculatePizzaPrice } from "../../src/utils/numbers"
 
 describe("number utils", () => {
   describe("formatPrice", () => {

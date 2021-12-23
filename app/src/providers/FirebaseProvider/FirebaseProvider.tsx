@@ -1,12 +1,10 @@
 import * as React from "react"
-import {initializeApp} from "firebase/app"
-import {initializeAuth} from "firebase/auth"
+import { initializeApp } from "firebase/app"
+import { initializeAuth } from "firebase/auth"
 
-import type {FirebaseModules, Props} from "./FirebaseProvider.types"
+import type { FirebaseModules, Props } from "./FirebaseProvider.types"
 
-export const FirebaseContext = React.createContext<FirebaseModules | undefined>(
-  undefined
-)
+export const FirebaseContext = React.createContext<FirebaseModules | undefined>(undefined)
 
 const firebaseConfig = {
   apiKey: process.env.GATSBY_FIRESTORE_API_KEY,
@@ -21,10 +19,6 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig)
 const auth = initializeAuth(firebaseApp)
 
-export const FirebaseProvider = ({children}: Props) => {
-  return (
-    <FirebaseContext.Provider value={{app: firebaseApp, auth}}>
-      {children}
-    </FirebaseContext.Provider>
-  )
+export const FirebaseProvider = ({ children }: Props) => {
+  return <FirebaseContext.Provider value={{ app: firebaseApp, auth }}>{children}</FirebaseContext.Provider>
 }

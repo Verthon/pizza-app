@@ -1,5 +1,5 @@
-import {Layout} from "../layouts/Layout/Layout"
-import {AppProviders} from "../providers/AppProviders/AppProviders"
+import { Layout } from "../layouts/Layout/Layout"
+import { AppProviders } from "../providers/AppProviders/AppProviders"
 
 function AboutPage() {
   return (

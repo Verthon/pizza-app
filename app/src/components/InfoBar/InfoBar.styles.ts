@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {SProps} from "./InfoBar.types"
+import { SProps } from "./InfoBar.types"
 
 const Container = styled.div<SProps>`
   background-color: ${(props) => {
@@ -15,7 +15,7 @@ const Container = styled.div<SProps>`
     return props.theme.colors.blueGrey700
   }};
   text-align: center;
-  padding: ${({theme}) => theme.spacing.sm};
+  padding: ${({ theme }) => theme.spacing.sm};
 `
 
 export const Styled = {
