@@ -1,14 +1,9 @@
 import { HEIGHT } from "./Button"
 
-export enum Variant {
-  primary = "primary",
-  secondary = "secondary",
-}
-
 type Size = keyof typeof HEIGHT
 
 export type Props = {
-  variant?: Variant
+  variant?: "primary" | "secondary"
   $loading?: boolean
   type?: "button" | "submit" | "reset"
   $size?: Size

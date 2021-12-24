@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 
 import { Layout } from "../layouts/Layout/Layout"
 import { InfoBar } from "../components/molecules/InfoBar/InfoBar"
-import { Coupon } from "../components/atoms/Coupon/Coupon"
+import { Coupon } from "../components/molecules/Coupon/Coupon"
 import { PizzaList } from "../components/molecules/PizzaList/PizzaList"
 import { Pizzas } from "../api/types"
 import { AppProviders } from "../providers/AppProviders/AppProviders"

@@ -1,7 +1,7 @@
 import { theme } from "../../../theme/theme"
 import { Spinner } from "../../icons/Spinner"
 import { Styled } from "./Button.styles"
-import { Props, Variant } from "./Button.types"
+import { Props } from "./Button.types"
 
 export const HEIGHT = Object.freeze({
   xsmall: 24,
@@ -11,7 +11,7 @@ export const HEIGHT = Object.freeze({
 } as const)
 
 export const Button = ({
-  variant = Variant.primary,
+  variant = "primary",
   children,
   $loading = false,
   type = "submit",
