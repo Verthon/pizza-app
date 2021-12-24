@@ -23,6 +23,7 @@ module.exports = {
     "!src/**/*.styles.ts",
     "!src/**/*.types.ts",
     "!src/providers/**/*",
+    "!src/components/atoms/**/*",
   ],
   setupFilesAfterEnv: ["<rootDir>/setup-test-env.js"],
 }

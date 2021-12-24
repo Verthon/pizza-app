@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 
 import { Pizzas } from "../api/types"
 import { Layout } from "../layouts/Layout/Layout"
-import { PizzaList } from "../components/PizzaList/PizzaList"
+import { PizzaList } from "../components/molecules/PizzaList/PizzaList"
 import { AppProviders } from "../providers/AppProviders/AppProviders"
 
 function MenuPage({ data }: { data: Pizzas }) {
