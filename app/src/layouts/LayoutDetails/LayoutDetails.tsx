@@ -1,6 +1,6 @@
 import { navigate } from "gatsby"
 
-import { Button } from "../../components/Button/Button"
+import { Button } from "../../components/atoms/Button/Button"
 import { ChevronRightIcon } from "../../components/icons/ChevronRight"
 import { Styled } from "./LayoutDetails.styles"
 import { Props } from "./LayoutDetails.types"

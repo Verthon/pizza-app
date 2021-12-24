@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import type { ImageStyleProps } from "../components/PizzaItem/PizzaItem.types"
+import type { ImageStyleProps } from "../components/molecules/PizzaItem/PizzaItem.types"
 
 type Size = {
   active: boolean

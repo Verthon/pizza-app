@@ -1,6 +1,6 @@
-import { Heading } from "../components/Heading/Heading"
+import { Heading } from "../components/atoms/Heading/Heading"
 import { Layout } from "../layouts/Layout/Layout"
-import { Text } from "../components/Text/Text"
+import { Text } from "../components/atoms/Text/Text"
 import { AppProviders } from "../providers/AppProviders/AppProviders"
 
 function RegisterPage() {

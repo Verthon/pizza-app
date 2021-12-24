@@ -1,7 +1,7 @@
-import { Navbar } from "../../components/Navbar/Navbar"
-import { Container } from "../../components/Container/Container"
+import { Navbar } from "../../components/organisms/Navbar/Navbar"
+import { Container } from "../../components/atoms/Container/Container"
 import { Props } from "./Layout.types"
-import { InfoBar } from "../../components/InfoBar/InfoBar"
+import { InfoBar } from "../../components/molecules/InfoBar/InfoBar"
 import { useAppState } from "../../hooks/useAppState/useAppState"
 
 export function Layout({ children }: Props) {
