@@ -1,4 +1,4 @@
-import { createSelectorHook } from "react-redux";
+import { createSelectorHook } from "react-redux"
 
 import type { State } from "../../store"
 

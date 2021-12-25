@@ -1,31 +1,30 @@
-import { FluidObject, FixedObject } from "gatsby-image"
-
 export type PizzaNode = {
-  id: string,
-  name: string,
+  id: string
+  name: string
   slug: {
-    current: string,
+    current: string
   }
-  toppings: Topping[],
+  toppings: Topping[]
   image: {
     asset: ImageProps
   }
-  price: number,
+  price: number
 }
 
 export type Topping = {
-  id: string,
+  id: string
   name: string
   vegetarian: boolean | null
 }
 
 export type Pizzas = {
   pizzas: {
-    nodes: PizzaNode[],
+    nodes: PizzaNode[]
   }
 }
 
 export type ImageProps = {
-  fluid?: FluidObject | FluidObject[]
-  fixed?: FixedObject | FixedObject[]
+  // any till there will be correct type from GatsbyPlugin
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  gatsbyImageData: any
 }

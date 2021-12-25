@@ -1,8 +1,6 @@
-import * as React from "react";
-import { Layout } from "../layouts/Layout/Layout";
-import { AppProviders } from "../providers/AppProviders/AppProviders";
+import { Layout } from "../layouts/Layout/Layout"
+import { AppProviders } from "../providers/AppProviders/AppProviders"
 
-// markup
 function OrderPage() {
   return (
     <AppProviders>
@@ -10,7 +8,7 @@ function OrderPage() {
         <p>order</p>
       </Layout>
     </AppProviders>
-  );
+  )
 }
 
-export default OrderPage;
+export default OrderPage

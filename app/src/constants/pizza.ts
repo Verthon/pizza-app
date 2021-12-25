@@ -1,5 +1,5 @@
 export const sizes = {
   S: "S",
   M: "M",
-  L: "L"
-}
+  L: "L",
+} as const

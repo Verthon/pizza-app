@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react-hooks'
+import { renderHook } from "@testing-library/react-hooks"
 
 import { useWindowSize } from "../../../src/hooks/useWindowSize/useWindowSize"
 
@@ -9,7 +9,7 @@ beforeAll(() => {
       innerHeight: height,
       outerWidth: width,
       outerHeight: height,
-    }).dispatchEvent(new this.Event('resize'))
+    }).dispatchEvent(new this.Event("resize"))
   }
 })
 

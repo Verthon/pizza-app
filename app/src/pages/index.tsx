@@ -1,25 +1,24 @@
-import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql } from "gatsby"
 
-import { Layout } from "../layouts/Layout/Layout";
-import { InfoBar } from "../components/InfoBar/InfoBar";
-import { Coupon } from "../components/Coupon/Coupon";
-import { PizzaList } from "../components/PizzaList/PizzaList";
-import { Pizzas } from "../api/types";
-import { AppProviders } from "../providers/AppProviders/AppProviders";
+import { Layout } from "../layouts/Layout/Layout"
+import { InfoBar } from "../components/molecules/InfoBar/InfoBar"
+import { Coupon } from "../components/molecules/Coupon/Coupon"
+import { PizzaList } from "../components/molecules/PizzaList/PizzaList"
+import { Pizzas } from "../api/types"
+import { AppProviders } from "../providers/AppProviders/AppProviders"
 
 function IndexPage({ data }: { data: Pizzas }) {
   return (
     <AppProviders>
       <Layout>
         <h1>Mighty Pizza</h1>
-        <InfoBar text="250 Straconki, Bielsko - Biala, 43-300" />
+        <InfoBar message="250 Straconki, Bielsko - Biala, 43-300" />
         <Coupon discount={50} text="for your next order" />
         <h2>Top this weekend</h2>
         <PizzaList pizzas={data.pizzas.nodes} />
       </Layout>
     </AppProviders>
-  );
+  )
 }
 
 export const query = graphql`
@@ -39,14 +38,12 @@ export const query = graphql`
         price
         image {
           asset {
-            fluid(maxWidth: 400) {
-              ...GatsbySanityImageFluid
-            }
+            gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
           }
         }
       }
     }
   }
-`;
+`
 
-export default IndexPage;
+export default IndexPage

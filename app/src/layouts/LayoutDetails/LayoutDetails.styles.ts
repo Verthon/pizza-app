@@ -37,5 +37,5 @@ const Footer = styled.footer`
 export const Styled = {
   Container,
   Navbar,
-  Footer
+  Footer,
 }

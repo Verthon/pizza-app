@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux"
 
 import type { Dispatch } from "../../store/index"
 
