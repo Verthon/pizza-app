@@ -1,9 +1,9 @@
 import styled from "styled-components"
-import { SProps, Variant } from "./Button.types"
+import { SProps } from "./Button.types"
 
 const Button = styled.button<SProps>`
   background-color: ${(props) => {
-    if (props.variant === Variant.primary) {
+    if (props.variant === "primary") {
       return props.theme.colors.primary
     }
   }};

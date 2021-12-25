@@ -1,11 +1,6 @@
-export enum Provider {
-  facebook = "facebook",
-  google = "google",
-}
-
 export type Props = {
   children: React.ReactNode
-  provider: Provider
+  provider: "facebook" | "google"
 }
 
 export type SProps = Omit<Props, "children">
