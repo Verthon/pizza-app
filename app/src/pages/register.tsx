@@ -1,15 +1,10 @@
-import { Heading } from "../components/atoms/Heading/Heading"
-import { Layout } from "../layouts/Layout/Layout"
-import { Text } from "../components/atoms/Text/Text"
 import { AppProviders } from "../providers/AppProviders/AppProviders"
+import { RegisterContent } from "../templates/RegisterContent/RegisterContent"
 
 function RegisterPage() {
   return (
     <AppProviders>
-      <Layout>
-        <Heading level={1}>Register page</Heading>
-        <Text align="center">add your details to register</Text>
-      </Layout>
+      <RegisterContent />
     </AppProviders>
   )
 }
