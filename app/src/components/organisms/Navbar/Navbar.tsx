@@ -14,18 +14,18 @@ export function Navbar() {
     return <MobileNavbar />
   }
   return <Container><Styled.Nav>
-    <Styled.Logo>Mighty Pizza</Styled.Logo>
+    <Styled.Logo>Crustica</Styled.Logo>
     <Styled.List>
-      <Styled.ListItem><Link route={ROUTES.home}>
+      <Styled.ListItem><Link route={ROUTES.home} activeClassName="navbar-desktop-active">
         Home
       </Link></Styled.ListItem>
-      <Styled.ListItem><Link route={ROUTES.menu}>
+      <Styled.ListItem><Link route={ROUTES.menu} activeClassName="navbar-desktop-active">
         Menu
       </Link></Styled.ListItem>
-      <Styled.ListItem><Link route={ROUTES.account}>
+      <Styled.ListItem><Link route={ROUTES.account} activeClassName="navbar-desktop-active">
         Account
       </Link></Styled.ListItem>
-      <Styled.ListItem><Link route={ROUTES.order}>
+    <Styled.ListItem><Link route={ROUTES.order} activeClassName="navbar-desktop-active">
         Order
       </Link></Styled.ListItem>
     </Styled.List>

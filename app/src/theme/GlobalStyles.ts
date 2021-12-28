@@ -44,4 +44,21 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
+
+  .navbar-desktop-active {
+    font-weight: 600;
+    position: relative;
+  }
+
+  .navbar-desktop-active::before {
+    position: absolute;
+    display: inline-flex;
+    align-self: center;
+    justify-self: center;
+    content:"⚫";
+    width:2px;
+    height:2px;
+    bottom: 0;
+    left: 25%;
+  }
 `

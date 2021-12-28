@@ -1,11 +1,8 @@
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import type { ImageStyleProps } from "../components/molecules/PizzaItem/PizzaItem.types"
-
-type Size = {
-  active: boolean
-}
+import type { ImageStyleProps } from "../../components/molecules/PizzaItem/PizzaItem.types"
+import type { Size } from "./PizzaDetailsContent.types"
 
 const Title = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.xxl};
