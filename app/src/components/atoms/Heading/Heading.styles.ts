@@ -1,10 +1,14 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 import { SProps } from "./Heading.types"
 
-const Header = styled.h1<SProps>`
+const baseStyle = css<SProps>`
   text-align: center;
   font-size: ${(props) => props.theme.headerFontSizes[props.size]};
+`
+
+const Header = styled.h1<SProps>`
+  ${baseStyle}
 `
 
 export const Styled = {

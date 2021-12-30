@@ -1,3 +1,5 @@
+import { css, CSSObject, InterpolationFunction, ThemeProps } from 'styled-components';
+
 export interface ITheme {
   colors: typeof colors
   fontSizes: typeof fontSizes
@@ -23,7 +25,7 @@ const border = {
 }
 
 export const mediaQueries = (key: keyof typeof breakpoints) => {
-  return (style: TemplateStringsArray | string) => `@media (min-width: ${breakpoints[key]}em) { ${style} }`
+  return (style: TemplateStringsArray | string) => `@media (min-width: ${breakpoints[key]}px) { ${style}; }`
 }
 
 const shadow = {
@@ -134,6 +136,22 @@ const spacing = {
 
 const fontFamily = {
   main: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;",
+}
+
+const getBreakpointScaleFromTheme = (breakpoint: keyof typeof breakpoints) =>
+  css(({ theme }) => theme.breakpoints[breakpoint])
+
+  const breakpointToMediaQuery = (breakpoint: keyof typeof breakpoints) => (templateStrings: CSSObject | TemplateStringsArray | InterpolationFunction<ThemeProps<ITheme>>) => css`
+  @media (min-width: ${getBreakpointScaleFromTheme(breakpoint)} {
+    ${css(templateStrings)}
+}
+`
+export const media = {
+  xs: breakpointToMediaQuery("xs"),
+  sm: breakpointToMediaQuery("sm"),
+  md: breakpointToMediaQuery("md"),
+  lg: breakpointToMediaQuery("lg"),
+  xl: breakpointToMediaQuery("xl"),
 }
 
 export const theme: ITheme = Object.freeze({
