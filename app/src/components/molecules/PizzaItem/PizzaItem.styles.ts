@@ -2,10 +2,17 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import type { ImageStyleProps } from "./PizzaItem.types"
+import { mediaQueries } from "../../../theme/theme"
+
 
 const Container = styled.div`
+  display: flex;
   padding: ${({ theme }) => theme.spacing.md} 0;
   color: ${({ theme }) => theme.colors.blueGrey800};
+  
+  ${mediaQueries("md")`
+    padding: 1rem;
+  `};
 
   a {
     color: ${({ theme }) => theme.colors.blueGrey900};

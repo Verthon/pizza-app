@@ -44,4 +44,22 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
+
+  .navbar-desktop-active {
+    font-weight: 600;
+    position: relative;
+  }
+
+  .navbar-desktop-active::before {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    content: '\\25CF';
+    width: 100%;
+    height: 15px;
+    bottom: -10px;
+    font-size: 10px;
+    transition: all 1s ease-in-out; 
+  }
 `

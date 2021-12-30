@@ -1,22 +1,13 @@
 import { graphql } from "gatsby"
 
-import { Layout } from "../layouts/Layout/Layout"
-import { InfoBar } from "../components/molecules/InfoBar/InfoBar"
-import { Coupon } from "../components/molecules/Coupon/Coupon"
-import { PizzaList } from "../components/molecules/PizzaList/PizzaList"
-import { Pizzas } from "../api/types"
 import { AppProviders } from "../providers/AppProviders/AppProviders"
+import { HomeContent } from "../templates/HomeContent/HomeContent"
+import type { HomePageProps } from "../templates/HomeContent/HomeContent.types"
 
-function IndexPage({ data }: { data: Pizzas }) {
+function IndexPage({ data }: HomePageProps) {
   return (
     <AppProviders>
-      <Layout>
-        <h1>Mighty Pizza</h1>
-        <InfoBar message="250 Straconki, Bielsko - Biala, 43-300" />
-        <Coupon discount={50} text="for your next order" />
-        <h2>Top this weekend</h2>
-        <PizzaList pizzas={data.pizzas.nodes} />
-      </Layout>
+      <HomeContent pizzas={data.pizzas} />
     </AppProviders>
   )
 }

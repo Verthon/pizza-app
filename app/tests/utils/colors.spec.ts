@@ -20,7 +20,7 @@ describe("getIconColor", () => {
       },
     }))
 
-    expect(getIconColor(ROUTES.menu)).toEqual(theme.colors.iconColor)
+    expect(getIconColor([ROUTES.menu])).toEqual(theme.colors.iconColor)
   })
   it("should return default color if current route doesnt match", () => {
     windowSpy.mockImplementation(() => ({
@@ -29,6 +29,6 @@ describe("getIconColor", () => {
       },
     }))
 
-    expect(getIconColor(ROUTES.home)).toEqual(theme.colors.dark)
+    expect(getIconColor([ROUTES.home])).toEqual(theme.colors.dark)
   })
 })
