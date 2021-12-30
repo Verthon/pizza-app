@@ -53,12 +53,13 @@ export const GlobalStyle = createGlobalStyle`
   .navbar-desktop-active::before {
     position: absolute;
     display: inline-flex;
-    align-self: center;
-    justify-self: center;
-    content:"⚫";
-    width:2px;
-    height:2px;
-    bottom: 0;
-    left: 25%;
+    justify-content: center;
+    align-items: flex-end;
+    content: '\\25CF';
+    width: 100%;
+    height: 15px;
+    bottom: -10px;
+    font-size: 10px;
+    transition: all 1s ease-in-out; 
   }
 `
