@@ -3,6 +3,7 @@ import { Container } from "../../components/atoms/Container/Container"
 import { Props } from "./Layout.types"
 import { InfoBar } from "../../components/molecules/InfoBar/InfoBar"
 import { useAppState } from "../../hooks/useAppState/useAppState"
+import { PageTransition } from "../../components/molecules/PageTransition/PageTransition"
 
 export function Layout({ children }: Props) {
   const notificationMessage = useAppState((state) => state.notifications.message)
@@ -12,7 +13,10 @@ export function Layout({ children }: Props) {
     <>
       <InfoBar message={notificationMessage} type={notificationType} />
       <Navbar />
-      <Container>{children}</Container>
+      <PageTransition>
+        <Container>{children}</Container>
+      </PageTransition>
+
     </>
   )
 }
