@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import { mediaQueries } from "../../theme/theme"
+
 const Container = styled.div`
   margin: 0 2rem;
 `
@@ -32,6 +34,10 @@ const Footer = styled.footer`
   width: calc(100% - 4rem);
   position: fixed;
   bottom: 2rem;
+
+  ${mediaQueries("md")`
+    display: none;
+  `};
 `
 
 export const Styled = {
