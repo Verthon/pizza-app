@@ -2,7 +2,23 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import type { ImageStyleProps } from "../../components/molecules/PizzaItem/PizzaItem.types"
+import { mediaQueries } from "../../theme/theme"
+
 import type { Size } from "./PizzaDetailsContent.types"
+
+
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  ${mediaQueries("lg")`
+    grid-template-columns: repeat(2, 1fr);
+  `};
+`
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 const Title = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.xxl};
@@ -47,4 +63,6 @@ export const Styled = {
   SizeButton,
   SizeWrapper,
   SizeDescription,
+  Wrapper,
+  Content,
 }

@@ -29,7 +29,7 @@ export const query = graphql`
         price
         image {
           asset {
-            gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
+            gatsbyImageData(fit: FILLMAX, placeholder: BLURRED, height: 300)
           }
         }
       }
