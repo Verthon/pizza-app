@@ -36,9 +36,7 @@ const Footer = styled.footer`
   bottom: 2rem;
 
   ${mediaQueries("md")`
-    flex-direction: row;
-    width: auto;
-    position: relative;
+    display: none;
   `};
 `
 
