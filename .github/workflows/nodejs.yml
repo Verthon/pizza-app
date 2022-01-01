@@ -20,6 +20,12 @@ jobs:
       - name: Install dependencies
         working-directory: ./app
         run: npm ci
+      - name: Run format
+        working-directory: ./app
+        run: npm run format
+      - name: Run linter
+        working-directory: ./app
+        run: npm run lint  
       - name: Run unit and integration tests
         working-directory: ./app
         run: npm run test
