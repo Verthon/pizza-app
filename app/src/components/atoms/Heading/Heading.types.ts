@@ -9,15 +9,19 @@ export enum Size {
   xxl = "2.5rem",
 }
 
+export type Alignment = "left" | "right" | "center"
+
 export type Sizes = keyof ITheme["headerFontSizes"]
 
 export type Props = {
-  children: React.ReactNode
+  children: JSX.Element | JSX.Element[] | string | React.ElementType
   variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
   size?: Sizes
+  align?: Alignment
 }
 
 export type SProps = {
   as: keyof JSX.IntrinsicElements
   size: Sizes
+  align: Alignment
 }

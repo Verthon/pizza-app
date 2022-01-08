@@ -8,5 +8,9 @@ export const Link = ({ children, href, route, activeClassName }: Props) => {
     return <Styled.Anchor href={href}>{children}</Styled.Anchor>
   }
 
-  return <Styled.Link to={route || ROUTES.home} activeClassName={activeClassName}>{children}</Styled.Link>
+  return (
+    <Styled.Link to={route || ROUTES.home} activeClassName={activeClassName}>
+      {children}
+    </Styled.Link>
+  )
 }

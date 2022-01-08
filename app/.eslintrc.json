@@ -21,7 +21,15 @@
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
   },
-  "ignorePatterns": ["node_modules", "public", "gatsby-config.js", "gatsby-node.js", "jest-preprocess.js", "gatsby.js", "storybook-static"],
+  "ignorePatterns": [
+    "node_modules",
+    "public",
+    "gatsby-config.js",
+    "gatsby-node.js",
+    "jest-preprocess.js",
+    "gatsby.js",
+    "storybook-static"
+  ],
   "settings": {
     "react": {
       "version": "17.0.2"

@@ -6,7 +6,6 @@ import { mediaQueries } from "../../theme/theme"
 
 import type { Size } from "./PizzaDetailsContent.types"
 
-
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
