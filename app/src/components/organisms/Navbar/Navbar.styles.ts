@@ -27,5 +27,5 @@ export const Styled = {
   Nav,
   Logo,
   List,
-  ListItem
+  ListItem,
 }

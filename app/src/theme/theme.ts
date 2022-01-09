@@ -1,4 +1,4 @@
-import { css, CSSObject, InterpolationFunction, ThemeProps } from 'styled-components';
+import { css, CSSObject, InterpolationFunction, ThemeProps } from "styled-components"
 
 export interface ITheme {
   colors: typeof colors
@@ -122,6 +122,8 @@ const breakpoints = {
   md: 768,
   lg: 992,
   xl: 1200,
+  xxl: 1600,
+  x1: 1920,
 }
 
 const spacing = {
@@ -141,7 +143,10 @@ const fontFamily = {
 const getBreakpointScaleFromTheme = (breakpoint: keyof typeof breakpoints) =>
   css(({ theme }) => theme.breakpoints[breakpoint])
 
-  const breakpointToMediaQuery = (breakpoint: keyof typeof breakpoints) => (templateStrings: CSSObject | TemplateStringsArray | InterpolationFunction<ThemeProps<ITheme>>) => css`
+const breakpointToMediaQuery =
+  (breakpoint: keyof typeof breakpoints) =>
+  (templateStrings: CSSObject | TemplateStringsArray | InterpolationFunction<ThemeProps<ITheme>>) =>
+    css`
   @media (min-width: ${getBreakpointScaleFromTheme(breakpoint)} {
     ${css(templateStrings)}
 }

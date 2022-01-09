@@ -7,7 +7,7 @@ import { PizzaDetailsContent } from "./PizzaDetailsContent/PizzaDetailsContent"
 export default function SinglePizzaPage({ data: { pizza } }: Props) {
   return (
     <AppProviders>
-      <PizzaDetailsContent pizza={pizza}/>
+      <PizzaDetailsContent pizza={pizza} />
     </AppProviders>
   )
 }
