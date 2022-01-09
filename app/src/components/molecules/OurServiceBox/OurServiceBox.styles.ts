@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import { mediaQueries } from "../../../theme/theme"
+import { Styled as HeadingStyles } from "../../atoms/Heading/Heading.styles"
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,6 +10,9 @@ const Wrapper = styled.div`
   ${mediaQueries("lg")`
   padding: 1rem;
   `};
+  ${HeadingStyles.Header} {
+    margin: ${({ theme }) => theme.spacing.xs} 0;
+  }
 `
 
 export const Styled = {

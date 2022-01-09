@@ -8,6 +8,7 @@ const Container = styled.div`
   ${mediaQueries("lg")`
     grid-template-columns: repeat(3, 1fr);
   `};
+  margin: ${({ theme }) => theme.spacing.xl} 0;
 `
 
 export const Styled = {
