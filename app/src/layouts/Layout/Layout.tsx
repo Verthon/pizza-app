@@ -16,7 +16,6 @@ export function Layout({ children }: Props) {
       <PageTransition>
         <Container>{children}</Container>
       </PageTransition>
-
     </>
   )
 }

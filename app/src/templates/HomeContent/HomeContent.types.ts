@@ -1,7 +1,7 @@
 import type { Pizzas } from "../../api/types"
 
 export type HomePageProps = {
-    data: Pizzas
+  data: Pizzas
 }
 
 export type Props = Pizzas

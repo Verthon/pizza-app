@@ -44,6 +44,18 @@ export default {
       title: "Toppings",
       type: "array",
       of: [{ type: "reference", to: [{ type: "topping" }] }]
+    },
+    {
+      name: "shortDescription",
+      title: "Short description",
+      type: "string",
+      description: "Short description for the pizza will be visible on homepage and menu pages."
+    },
+    {
+      name: "longDescription",
+      title: "Long description",
+      type: "string",
+      description: "Long description for the pizza will be visible on pizza details pages."
     }
   ],
   preview: {
