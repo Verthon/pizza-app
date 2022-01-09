@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0;
+  margin: ${({ theme }) => theme.spacing.lg} 0;
   ${mediaQueries("lg")`
   padding: 1rem;
   `};

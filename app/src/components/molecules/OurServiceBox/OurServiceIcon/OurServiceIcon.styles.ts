@@ -6,7 +6,7 @@ const Wrapper = styled.div`
 
 const Container = styled.span`
   display: inline-flex;
-  padding: ${({ theme }) => theme.spacing.md};
+  padding: ${({ theme }) => theme.spacing.sm};
   background-color: ${({ theme }) => theme.colors.primary100};
   border-radius: 50%;
   svg {
