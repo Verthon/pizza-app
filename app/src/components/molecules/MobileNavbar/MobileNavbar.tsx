@@ -1,11 +1,13 @@
+import { CartIcon } from "@/icons/Cart"
 import { Link } from "gatsby"
 
-import { ROUTES } from "../../../constants/routes"
-import { CartIcon } from "../../icons/Cart"
-import { HomeIcon } from "../../icons/Home"
-import { MenuIcon } from "../../icons/Menu"
-import { UserIcon } from "../../icons/User"
-import { getIconColor } from "../../../utils/colors"
+import { HomeIcon } from "@/icons/Home"
+import { MenuIcon } from "@/icons/Menu"
+import { UserIcon } from "@/icons/User"
+import { getIconColor } from "@/utils/colors"
+import { ROUTES } from "src/constants/routes"
+
+
 
 import { Styled } from "./MobileNavbar.styles"
 
