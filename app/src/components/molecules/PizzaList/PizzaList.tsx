@@ -1,4 +1,6 @@
-import { PizzaItem } from "../PizzaItem/PizzaItem"
+
+import { PizzaItem } from "@/molecules/PizzaItem/PizzaItem"
+
 import { Styled } from "./PizzaList.styles"
 import type { Props } from "./PizzaList.types"
 

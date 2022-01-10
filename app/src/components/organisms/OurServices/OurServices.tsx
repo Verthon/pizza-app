@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-import { OurServiceBox } from "../../molecules/OurServiceBox/OurServiceBox"
+import { OurServiceBox } from "@/molecules/OurServiceBox/OurServiceBox"
 
 import { Styled } from "./OurServices.styles"
 import type { OurServicesResponse } from "./OurServices.types"

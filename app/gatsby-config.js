@@ -1,3 +1,4 @@
+const path = require("path")
 require("dotenv").config({ path: "./env.local" })
 
 console.log(process.env.SANITY_TOKEN, process.env)
@@ -40,5 +41,23 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     "gatsby-plugin-image",
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        "@/layouts": path.join(__dirname, "src/layouts"),
+        "@/templates": path.join(__dirname, "src/templates"),
+        "@/atoms": path.join(__dirname, "src/components/atoms"),
+        "@/molecules": path.join(__dirname, "src/components/molecules"),
+        "@/organisms": path.join(__dirname, "src/components/organisms"),
+        "@/icons": path.join(__dirname, "src/components/icons"),
+        "@/pages": path.join(__dirname, 'src/pages'),
+        "@/hooks": path.join(__dirname, "src/hooks"),
+        "@/reducers": path.join(__dirname, 'src/reducers'),
+        "@/store": path.join(__dirname, "src/store"),
+        "@/theme": path.join(__dirname, 'src/theme'),
+        "@/shared": path.join(__dirname, 'src/shared'),
+        "@/utils": path.join(__dirname, 'src/utils'),
+      }
+    },
   ],
 }

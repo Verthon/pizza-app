@@ -1,4 +1,4 @@
-import { ErrorMessage } from "../../atoms/ErrorMessage/ErrorMessage"
+import { ErrorMessage } from "@/atoms/ErrorMessage/ErrorMessage"
 
 import { Styled } from "./Input.styles"
 import { Props } from "./Input.types"

@@ -1,6 +1,6 @@
-import { Text } from "../../atoms/Text/Text"
-import { Heading } from "../../atoms/Heading/Heading"
-import { Link } from "../../atoms/Link/Link"
+import { Heading } from "@/atoms/Heading/Heading"
+import { Link } from "@/atoms/Link/Link"
+import { Text } from "@/atoms/Text/Text"
 
 import { Styled } from "./OurServiceBox.styles"
 import type { Props } from "./OurServiceBox.types"
