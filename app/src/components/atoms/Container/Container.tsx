@@ -1,6 +1,6 @@
 import { Styled } from "./Container.styles"
-import { Props } from "./Container.types"
+import type { ContainerProps } from "./Container.types"
 
-export const Container = ({ children }: Props) => {
+export const Container = ({ children }: ContainerProps) => {
   return <Styled.Container>{children}</Styled.Container>
 }

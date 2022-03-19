@@ -2,7 +2,7 @@ import * as React from "react"
 import { initializeApp } from "firebase/app"
 import { initializeAuth } from "firebase/auth"
 
-import type { FirebaseModules, Props } from "./FirebaseProvider.types"
+import type { FirebaseModules, FirebaseProviderProps } from "./FirebaseProvider.types"
 
 export const FirebaseContext = React.createContext<FirebaseModules | undefined>(undefined)
 
@@ -19,6 +19,6 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig)
 const auth = initializeAuth(firebaseApp)
 
-export const FirebaseProvider = ({ children }: Props) => {
+export const FirebaseProvider = ({ children }: FirebaseProviderProps) => {
   return <FirebaseContext.Provider value={{ app: firebaseApp, auth }}>{children}</FirebaseContext.Provider>
 }

@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import type { ImageStyleProps } from "../../components/molecules/PizzaItem/PizzaItem.types"
-import { mediaQueries } from "../../theme/theme"
+import type { ImageStyleProps } from "@/molecules/PizzaItem/PizzaItem.types"
+import { mediaQueries } from "@/theme/theme"
 
 import type { Size } from "./PizzaDetailsContent.types"
 
