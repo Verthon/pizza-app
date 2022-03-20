@@ -56,7 +56,23 @@ export default {
       title: "Long description",
       type: "string",
       description: "Long description for the pizza will be visible on pizza details pages."
-    }
+    },
+    {
+      name: "vegetarian",
+      title: "Vegetarian",
+      type: "boolean",
+      description: "Is topping vegetarian",
+      options: {
+        layout: "checkbox"
+      }
+    },
+    {
+      name: "sliceCalories",
+      title: "Calories per slice",
+      type: "number",
+      description: "Number of calories for one slice",
+      validation: Rule => Rule.min(50).max(1000)
+    },
   ],
   preview: {
     select: {
@@ -65,7 +81,11 @@ export default {
       topping0: "toppings.0.name",
       topping1: "toppings.1.name",
       topping2: "toppings.2.name",
-      topping3: "toppings.3.name"
-    }
+      topping3: "toppings.3.name",
+      vegetarian: "vegetarian",
+    },
+    prepare: ({ title, vegetarian }) => ({
+      title: `${title} ${vegetarian ? "🌱" : ""}`
+    })
   },
 }
