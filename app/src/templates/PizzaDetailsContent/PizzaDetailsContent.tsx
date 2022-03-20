@@ -5,10 +5,12 @@ import { sizes } from "../../constants/pizza"
 import { calculatePizzaPrice, formatPrice } from "../../utils/numbers"
 
 import { Styled } from "./PizzaDetailsContent.styles"
-import type { PizzaSizeProps, Props } from "./PizzaDetailsContent.types"
+import type { PizzaSizeProps, Props, QuickFactsProps } from "./PizzaDetailsContent.types"
 import { CheckCircleIcon } from "@/icons/CheckCircle"
 import { FireIcon } from "@/icons/Fire"
 import { theme } from "@/theme/theme"
+import SinglePizzaPage from "../Pizza"
+import { AmountButton } from "@/atoms/AmountButton/AmountButton"
 
 const SIZE_IN_CM = {
   S: 25,
@@ -38,16 +40,16 @@ const PizzaSize = ({ activeSize, setActiveSize }: PizzaSizeProps) => {
   )
 }
 
-const QuickFact = () => {
+const QuickFact = ({ sliceCalories, vegetarian }: QuickFactsProps) => {
   return (
     <Styled.QuickFactWrapper>
-      <Styled.QuickFact>
+      {vegetarian ? <Styled.QuickFact>
         <CheckCircleIcon />
         <span>Vegetarian</span>
-      </Styled.QuickFact>
+      </Styled.QuickFact> : null}
       <Styled.QuickFact>
         <FireIcon color={theme.colors.danger500} />
-        <span>Slice - 214 kcal</span>
+        <span>Slice - {sliceCalories} kcal</span>
       </Styled.QuickFact>
     </Styled.QuickFactWrapper>
   )
@@ -55,6 +57,7 @@ const QuickFact = () => {
 
 export const PizzaDetailsContent = ({ pizza }: Props) => {
   const [activeSize, setActiveSize] = React.useState<keyof typeof sizes>(sizes.M)
+  const [pizzaAmount, setPizzaAmount] = React.useState(0);
 
   return (
     <LayoutDetails buttonText="Add to cart" title={pizza.name}>
@@ -62,9 +65,10 @@ export const PizzaDetailsContent = ({ pizza }: Props) => {
         <Styled.Image image={pizza.image.asset.gatsbyImageData} alt="" />
         <Styled.Content>
           <Styled.Title>{pizza.name}</Styled.Title>
-          <QuickFact />
+          <QuickFact sliceCalories={pizza.sliceCalories} vegetarian={pizza.vegetarian} />
           <Styled.Description>{pizza.longDescription}</Styled.Description>
           <PizzaSize activeSize={activeSize} setActiveSize={setActiveSize} />
+          <AmountButton pizzaAmount={pizzaAmount} setPizzaAmount={setPizzaAmount}/>
           <Styled.Price>{formatPrice(calculatePizzaPrice(pizza.price, activeSize))}</Styled.Price>
         </Styled.Content>
       </Styled.Wrapper>

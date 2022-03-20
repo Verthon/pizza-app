@@ -39,5 +39,7 @@ export type PizzaDetails = {
     toppings: Topping[]
     shortDescription: string
     longDescription: string
+    sliceCalories?: number
+    vegetarian?: boolean
   }
 }

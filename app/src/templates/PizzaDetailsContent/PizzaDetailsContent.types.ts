@@ -8,6 +8,11 @@ export type Size = {
 }
 
 export type PizzaSizeProps = {
-  activeSize: keyof typeof sizes;
+  activeSize: keyof typeof sizes
   setActiveSize: React.Dispatch<React.SetStateAction<PizzaSizeProps["activeSize"]>>
+}
+
+export type QuickFactsProps = {
+  vegetarian: PizzaDetails["pizza"]["vegetarian"]
+  sliceCalories: PizzaDetails["pizza"]["sliceCalories"]
 }

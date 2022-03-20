@@ -1,4 +1,5 @@
 import { Container } from "@/atoms/Container/Container"
+import { CartIcon } from "@/icons/Cart"
 import { navigate } from "gatsby"
 
 import { Button } from "../../components/atoms/Button/Button"
@@ -20,7 +21,9 @@ export const LayoutDetails = ({ children, buttonText, title }: Props) => {
             <ChevronRightIcon />
           </span>
           <p>{title}</p>
-          <div></div>
+          <span>
+            <CartIcon />
+          </span>
         </Styled.Navbar>
         {children}
         <Styled.Footer>
