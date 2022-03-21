@@ -3,14 +3,13 @@ import * as React from "react"
 import { LayoutDetails } from "../../layouts/LayoutDetails/LayoutDetails"
 import { sizes } from "../../constants/pizza"
 import { calculatePizzaPrice, formatPrice } from "../../utils/numbers"
-
-import { Styled } from "./PizzaDetailsContent.styles"
-import type { PizzaSizeProps, Props, QuickFactsProps } from "./PizzaDetailsContent.types"
 import { CheckCircleIcon } from "@/icons/CheckCircle"
 import { FireIcon } from "@/icons/Fire"
 import { theme } from "@/theme/theme"
-import SinglePizzaPage from "../Pizza"
 import { AmountButton } from "@/atoms/AmountButton/AmountButton"
+
+import { Styled } from "./PizzaDetailsContent.styles"
+import type { PizzaSizeProps, Props, QuickFactsProps } from "./PizzaDetailsContent.types"
 
 const SIZE_IN_CM = {
   S: 25,
@@ -68,8 +67,10 @@ export const PizzaDetailsContent = ({ pizza }: Props) => {
           <QuickFact sliceCalories={pizza.sliceCalories} vegetarian={pizza.vegetarian} />
           <Styled.Description>{pizza.longDescription}</Styled.Description>
           <PizzaSize activeSize={activeSize} setActiveSize={setActiveSize} />
-          <AmountButton pizzaAmount={pizzaAmount} setPizzaAmount={setPizzaAmount}/>
-          <Styled.Price>{formatPrice(calculatePizzaPrice(pizza.price, activeSize))}</Styled.Price>
+          <Styled.PriceWrapper>
+            <AmountButton pizzaAmount={pizzaAmount} setPizzaAmount={setPizzaAmount} />
+            <Styled.Price>{formatPrice(calculatePizzaPrice(pizza.price, activeSize))}</Styled.Price>
+          </Styled.PriceWrapper>
         </Styled.Content>
       </Styled.Wrapper>
     </LayoutDetails>

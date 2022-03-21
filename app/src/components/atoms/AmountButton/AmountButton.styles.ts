@@ -4,7 +4,7 @@ const Wrapper = styled.div(
   ({ theme }) => css`
     display: inline-flex;
     align-items: center;
-    align-self: center;
+    align-self: flex-start;
     background-color: ${theme.colors.blueGrey200};
     border-radius: ${theme.border.defaultRadius};
     padding: 0.5rem 0;

@@ -42,13 +42,28 @@ const Price = styled.p(
     font-size: ${theme.fontSizes.xl};
     text-align: center;
     font-weight: bold;
-    margin: 1rem 0;
+    margin: 0 2rem 0 0;
 
     ${mediaQuery("lg")} {
       text-align: left;
+      margin: 0 2rem 0 0;
     }
   `
 )
+
+const PriceWrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+  ${mediaQuery("lg")} {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 2rem 0 0 0;
+  }
+`
 
 const SizeWrapper = styled.div`
   display: flex;
@@ -109,8 +124,8 @@ QuickFactWrapper.displayName = "PizzaDetailsQuickFactWrapper"
 const QuickFact = styled.div`
   display: inline-flex;
   align-items: center;
-  margin : 0 1rem 0 0;
-  font-size: 
+  margin: 0 1rem 0 0;
+  font-size: ;
 `
 QuickFact.displayName = "PizzaDetailsQuickFact"
 
@@ -124,7 +139,7 @@ SizeButtonsWrapper.displayName = "PizzaDetailsSizeButtonsWrapper"
 Wrapper.displayName = "PizzaDetailsWrapper"
 Content.displayName = "PizzaDetailsContent"
 Description.displayName = "PizzaDetailsDescription"
-
+PriceWrapper.displayName = "PizzaDetailsPriceWrapper"
 
 export const Styled = {
   Title,
@@ -138,5 +153,6 @@ export const Styled = {
   Content,
   Description,
   QuickFactWrapper,
-  QuickFact
+  QuickFact,
+  PriceWrapper,
 }
