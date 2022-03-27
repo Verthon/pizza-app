@@ -1,3 +1,1 @@
-export type Props = {
-  children: React.ReactNode
-}
+export type AppProvidersProps = React.PropsWithChildren<unknown>

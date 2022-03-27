@@ -26,7 +26,11 @@ export const query = graphql`
         name
         vegetarian
         id
-      }
+      },
+      shortDescription
+      longDescription
+      sliceCalories
+      vegetarian
     }
   }
 `

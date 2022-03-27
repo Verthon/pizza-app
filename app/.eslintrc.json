@@ -3,7 +3,6 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -16,7 +15,11 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
@@ -28,7 +31,10 @@
     "gatsby-node.js",
     "jest-preprocess.js",
     "gatsby.js",
-    "storybook-static"
+    "storybook-static",
+    "jest.config.js",
+    "tests/file-mock.js",
+    "tests/loadershim.js"
   ],
   "settings": {
     "react": {

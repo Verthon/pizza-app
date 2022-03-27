@@ -6,6 +6,4 @@ export type FirebaseModules = {
   auth: Auth
 }
 
-export type Props = {
-  children: React.ReactNode
-}
+export type FirebaseProviderProps = React.PropsWithChildren<unknown>

@@ -1,3 +1,5 @@
+import { Container } from "@/atoms/Container/Container"
+import { CartIcon } from "@/icons/Cart"
 import { navigate } from "gatsby"
 
 import { Button } from "../../components/atoms/Button/Button"
@@ -13,19 +15,21 @@ export const LayoutDetails = ({ children, buttonText, title }: Props) => {
   }
   return (
     <PageTransition variants={DETAILS_PAGE_VARIANTS}>
-      <Styled.Container>
+      <Container>
         <Styled.Navbar>
           <span onClick={navigateBack}>
             <ChevronRightIcon />
           </span>
           <p>{title}</p>
-          <div></div>
+          <span>
+            <CartIcon />
+          </span>
         </Styled.Navbar>
         {children}
         <Styled.Footer>
           <Button $size="large">{buttonText}</Button>
         </Styled.Footer>
-      </Styled.Container>
+      </Container>
     </PageTransition>
   )
 }

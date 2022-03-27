@@ -1,7 +1,7 @@
 {
   "name": "pizzaapp",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "package.json",
   "author": "Krzysztof Sordyl <christopher.sordyl@gmail.com>",

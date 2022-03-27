@@ -1,7 +1,8 @@
-import { theme } from "../../../theme/theme"
-import { GiftIcon } from "../../icons/Gift"
+import { GiftIcon } from "@/icons/Gift"
+import { theme } from "@/theme/theme"
+
 import { Styled } from "./Coupon.styles"
-import { Props } from "./Coupon.types"
+import type { Props } from "./Coupon.types"
 
 export const Coupon = ({ discount, text }: Props) => {
   return (

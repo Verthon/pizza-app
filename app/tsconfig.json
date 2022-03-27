@@ -10,7 +10,27 @@
     "noUnusedParameters": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/atoms/*": ["src/components/atoms/*"],
+      "@/icons/*": ["src/components/icons/*"],
+      "@/molecules/*": ["src/components/molecules/*"],
+      "@/organisms/*": ["src/components/organisms/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/layouts/*": ["src/layouts/*"],
+      "@/providers/*": ["src/providers"],
+      "@/reducers/*": ["src/reducers/*"],
+      "@/templates/*": ["src/templates/*"],
+      "@/theme/*": ["src/theme/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/shared/*": ["src/shared/*"],
+    }
   },
-  "includes": ["styled-components.d.ts"]
+  //"includes": ["styled-components.d.ts"]
 }

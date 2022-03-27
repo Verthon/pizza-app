@@ -1,3 +1,5 @@
+import 'styled-components';
+
 import { ITheme } from "./src/theme/theme"
 
 declare module "styled-components" {
