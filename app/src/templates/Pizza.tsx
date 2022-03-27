@@ -5,7 +5,6 @@ import { AppProviders } from "../providers/AppProviders/AppProviders"
 import { PizzaDetailsContent } from "./PizzaDetailsContent/PizzaDetailsContent"
 
 export default function SinglePizzaPage({ data: { pizza } }: Props) {
-  console.log(pizza);
   return (
     <AppProviders>
       <PizzaDetailsContent pizza={pizza} />
@@ -30,6 +29,8 @@ export const query = graphql`
       },
       shortDescription
       longDescription
+      sliceCalories
+      vegetarian
     }
   }
 `

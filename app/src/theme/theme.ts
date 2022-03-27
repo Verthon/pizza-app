@@ -28,6 +28,8 @@ export const mediaQueries = (key: keyof typeof breakpoints) => {
   return (style: TemplateStringsArray | string) => `@media (min-width: ${breakpoints[key]}px) { ${style}; }`
 }
 
+export const mediaQuery = (key: keyof typeof breakpoints) => `@media (min-width: ${breakpoints[key]}px)`;
+
 const shadow = {
   default: "0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);",
   category: "0 1px 3px hsla(0, 50%, 20%, 0.2)",
@@ -99,6 +101,8 @@ const fontSizes = {
   lg: "1.25rem",
   xl: "1.5rem",
   xxl: "1.75rem",
+  "2x": "2rem",
+  "3x": "2.25rem",
 }
 
 const headerFontSizes = {
@@ -143,7 +147,7 @@ const fontFamily = {
 const getBreakpointScaleFromTheme = (breakpoint: keyof typeof breakpoints) =>
   css(({ theme }) => theme.breakpoints[breakpoint])
 
-const breakpointToMediaQuery =
+export const breakpointToMediaQuery =
   (breakpoint: keyof typeof breakpoints) =>
   (templateStrings: CSSObject | TemplateStringsArray | InterpolationFunction<ThemeProps<ITheme>>) =>
     css`
